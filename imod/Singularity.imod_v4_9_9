@@ -12,7 +12,15 @@ MirrorURL: http://au.archive.ubuntu.com/ubuntu/
 %runscript
     echo "IMOD container built for CVL"
     echo "For new versions please contact help@cvl.org.au"
+    $*
 
+%environment
+    export IMOD_DIR=/usr/local/IMOD
+    export IMOD_QTLIBDIR=/usr/local/IMOD/qtlib
+    export PATH=/usr/local/IMOD/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
+    export IMOD_PLUGIN_DIR=/usr/local/IMOD/lib/imodplug
+    export IMOD_JAVADIR=/usr/local/java
+    export IMOD_CALIB_DIR=/usr/local/ImodCalib
 
 %post
     echo "*********************************************************"
@@ -33,7 +41,13 @@ MirrorURL: http://au.archive.ubuntu.com/ubuntu/
     echo "Update repositories and install desktop"
     apt update
     apt upgrade -y
-    apt install -y locales
+    apt install -y locales wget
+    wget https://swift.rc.nectar.org.au:8888/v1/AUTH_810/CVL-Singularity-External-Files/turbovnc_2.1.2_amd64.deb
+    dpkg -i turbovnc_2.1.2_amd64.deb
+    wget https://swift.rc.nectar.org.au:8888/v1/AUTH_810/CVL-Singularity-External-Files/virtualgl_2.5.2_amd64.deb
+    dpkg -i virtualgl_2.5.2_amd64.deb
+    apt update
+    apt -y upgrade
     locale-gen en_AU.UTF-8
     apt install -y wget ubuntu-desktop vim software-properties-common git cmake default-jre 
     echo "*********************************************************"
@@ -44,6 +58,14 @@ MirrorURL: http://au.archive.ubuntu.com/ubuntu/
     echo "Installing python dependencies"
     apt install -y python-pip python-pyqt5 pyqt5-dev python-tk
     echo "*********************************************************"
+    echo "Installing libjpeg dependencies"
+    apt install -y libjpeg-turbo8-*
+    apt install -y libjpeg-dev
+    apt install -y libjpeg8*
+    apt install -y libjpeg62*
+    echo "*********************************************************"
     echo "Installing software"
     wget https://bio3d.colorado.edu/imod/AMD64-RHEL5/imod_4.9.9_RHEL6-64_CUDA8.0.sh
-    /bin/bash imod_4.9.9_RHEL6-64_CUDA8.0.sh -yes
+    chmod +x imod_4.9.9_RHEL6-64_CUDA8.0.sh
+    ./imod_4.9.9_RHEL6-64_CUDA8.0.sh -yes
+
