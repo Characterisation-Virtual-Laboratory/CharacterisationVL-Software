@@ -1,0 +1,20 @@
+#!/usr/bin/expect -d
+set force_conservative 1  ;# set to 1 to force conservative mode even if
+                          ;# script wasn't run conservatively originally
+if {$force_conservative} {
+        set send_slow {1 .1}
+        proc send {ignore arg} {
+                sleep .1
+                exp_send -s -- $arg
+        }
+}
+
+set timeout -1
+spawn ./eman2.22.linux64.sh 
+match_max 100000
+expect -re ".*\[/home/root/EMAN2\].*"
+send -- "/opt/eman/\r"
+expect -re ".*\[no\].*"
+send -- "\r"
+expect eof
+
