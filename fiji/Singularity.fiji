@@ -60,5 +60,6 @@ Include: apt wget sudo vim build-essential git sudo software-properties-common
     echo "================================="    
     unzip -d /opt/fiji/ fiji-linux64.zip
 
+
 %runscript
     $*
