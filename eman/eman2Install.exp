@@ -10,7 +10,7 @@ if {$force_conservative} {
 }
 
 set timeout -1
-spawn ./eman2.22.linux64.sh 
+spawn /bin/bash eman2.22.linux64.sh 
 match_max 100000
 expect -re ".*\[/home/root/EMAN2\].*"
 send -- "/opt/eman/\r"
