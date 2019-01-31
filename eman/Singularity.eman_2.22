@@ -7,7 +7,8 @@ Include: apt wget sudo vim build-essential git sudo software-properties-common
     HARDWARE GPU
 
 %files
-    eman2Install.exp /tmp/
+    #eman2Install.exp /tmp/
+    input.txt /tmp/
 
 %environment
     export PATH=/opt/eman/bin:$PATH
@@ -68,16 +69,18 @@ Include: apt wget sudo vim build-essential git sudo software-properties-common
     chmod u+x eman2.22.linux64.sh
 
 
-    echo "================================"
-    echo " Installing expect              "
-    echo "================================"
-    apt install -y expect
+    #echo "================================"
+    #echo " Installing expect              "
+    #echo "================================"
+    #apt install -y expect
 
     echo "================================"
     echo "Installing EMAN 2.2             "
     echo "================================"
     export PATH=/opt/eman/bin:$PATH
-    expect eman2Install.exp    
+    #expect eman2Install.exp
+    cat input.txt | bash eman2.22.linux64.sh    
+
 
 %runscript
     $*
