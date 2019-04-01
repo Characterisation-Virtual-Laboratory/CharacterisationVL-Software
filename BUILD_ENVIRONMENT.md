@@ -1,12 +1,18 @@
+# Instructions for creating a singularity build machine on cloud
+
+
+
+## Singularity installation
 The build environment is setup as follow:
 1. Create virtual machine (NeCTAR 2-4 cores, Ubuntu 16.04)
 2. Install dependencies for singularity and functionality
 
+sudo apt install build-essential ubuntu-desktop vim libarchive-dev xfce4 xfce4-goodies
 
-sudo apt install build-essential
-sudo apt install ubuntu-desktop vim
-sudo apt install libarchive-dev
-
+The build machine will need to have a functional X configuration. To access this X server remotely the suggested tool is x2go. Installation and training instructions can be found here: http://training.nectar.org.au/package07/sections/connectWithX2Go.html
+### To install x2go
+sudo add-apt-repository ppa:x2go/stable
+sudo apt-get install x2goserver x2goserver-xsession
 
 3. Download and install singularity
 wget https://github.com/singularityware/singularity/releases/download/2.6.0/singularity-2.6.0.tar.gz
