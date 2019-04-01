@@ -13,6 +13,8 @@ The build machine will need to have a functional X configuration. To access this
 ### To install x2go
 sudo add-apt-repository ppa:x2go/stable
 
+sudo apt update
+
 sudo apt-get install x2goserver x2goserver-xsession
 
 3. Download and install singularity
