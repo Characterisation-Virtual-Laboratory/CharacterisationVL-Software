@@ -37,3 +37,16 @@ sudo mkdir -p /mnt/tmp
 sudo chown ubuntu /mnt/tmp
 
 sudo SINGULARITY_TMPDIR=/mnt/tmp singularity build XXX.img XXX.def |tee build`date +%R-%F`.log
+
+
+## Known Issues
+
+### Tab Key not working when using Xfce desktop
+When using the Xfce desktop, users may notice that the tab key does not work. This is due to a bug in Xfce sending a super key modifier with the command
+
+See Xfce bug 10760
+
+To fix this,
+Open the Xfce Application Menu > Settings > Window Manager
+Click on the Keyboard Tab
+Clear the Switch window for same application setting
