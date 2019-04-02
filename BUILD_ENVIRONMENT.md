@@ -17,6 +17,18 @@ sudo apt update
 
 sudo apt-get install x2goserver x2goserver-xsession
 
+### Install go to build singularity >3.x
+
+Follow instruction from https://golang.org/doc/install
+
+wget https://dl.google.com/go/go1.12.1.linux-amd64.tar.g
+
+sudo tar -C /usr/local -xzf go1.12.1.linux-amd64.tar.gz
+
+Add go binary path to profile
+
+sudo vim /etc/profile
+
 3. Download and install singularity
 wget https://github.com/singularityware/singularity/releases/download/2.6.0/singularity-2.6.0.tar.gz
 
