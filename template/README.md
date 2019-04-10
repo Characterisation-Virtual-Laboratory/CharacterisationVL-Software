@@ -1,0 +1,21 @@
+## Installation README
+
+* Website:  
+            add URL to software website
+* Source:   
+            add URL to source website
+
+* Run:      
+            singularity exec imageFileName.simg commandToRunSoftware
+
+* Test:     
+            singularity exec imageFileName.simg commandToTestSoftware
+
+* Examples:
+            If examples of running the software are available. Add the URLs and
+            possibly install them in the container, noting where in the container
+            they are installed.
+            e.g.
+            https://www.argos-sim.info/examples.php
+            https://github.com/ilpincy/argos3-examples
+            The examples have been installed in the container at /opt/argos3/argos3-examples.
