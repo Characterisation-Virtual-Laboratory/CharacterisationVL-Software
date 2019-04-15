@@ -5,6 +5,9 @@
 * Source:   
             add URL to source website
 
+* Licence:  
+            add licence details, URL to licence
+
 * Run:      
             singularity exec imageFileName.simg commandToRunSoftware
 
