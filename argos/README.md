@@ -4,7 +4,8 @@
             https://www.argos-sim.info/
 * Source:   
             https://github.com/ilpincy/argos3
-
+* Licence:  
+            https://opensource.org/licenses/MIT as detailed on https://www.argos-sim.info/index.php
 * Run:      
             singularity exec imageFileName.simg argos3 --help
 
