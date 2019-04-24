@@ -10,7 +10,7 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804
 
     HARDWARE CPU
 
-    LAST_UPDATED 12-APR-2019
+    LAST_UPDATED 24-APR-2019
 
 %environment
 
@@ -40,17 +40,10 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804
     apt install -y locales
     locale-gen en_AU.UTF-8
 
-    apt-get install -y qt5-default
-
     echo "================================="
-    echo " Installing Owncloud Client 2.5.4"
+    echo " Installing Owncloud Client 2.4.1"
     echo "================================="
-    cd /tmp
-    echo 'deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop:/client-2.5.4/Ubuntu_18.04/ /' > /etc/apt/sources.list.d/isv:ownCloud:desktop:client-2.5.4.list
-    wget -nv https://download.opensuse.org/repositories/isv:ownCloud:desktop:client-2.5.4/Ubuntu_18.04/Release.key -O Release.key
-    apt-key add - < Release.key
-    apt-get update
-    apt-get install -y --fix-missing owncloud-client
+    apt-get install -y owncloud-client owncloud-client-cmd
 
 %runscript
     $*
