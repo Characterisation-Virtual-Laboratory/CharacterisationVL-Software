@@ -8,6 +8,10 @@
 * Licence:  
             add licence details, URL to licence
 
+* Prerequisites:
+            Due to software licensing (e.g. preventing redistribution), there may be some prerequisites to building the container.
+            This should be detailed here. 
+
 * Run:      
             singularity exec imageFileName.simg commandToRunSoftware
 
