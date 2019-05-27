@@ -12,9 +12,11 @@ $ git branch <software name>
 ```
 2. Make a subdirectory
 3. Add all the necessary files
- * Singularity definition file
- * Readme file including install and testing notes 
+ * Singularity definition file or installation script
+ * Readme file including install and testing notes
+ * Desktop files for adding to menus with necessary tags
 4. Commit all changes, including a helpful message
+5. Check singularity hub for completed build.
 ```
 $ git commit -m "<software name> added as requested in support ticket"
 ```
