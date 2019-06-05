@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=3.5.1
+Name=Cell Profiler 3.5.1
+Comment=Cell image analysis
+Icon=CellProfiler.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-CELLPROFILER

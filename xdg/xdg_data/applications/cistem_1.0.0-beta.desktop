@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0.0-beta
+Name=Cistem 1.0.0-beta
+Comment=Computational Imaging System for Transmission Electron Microscopy
+Icon=cistemLogo.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-CISTEM

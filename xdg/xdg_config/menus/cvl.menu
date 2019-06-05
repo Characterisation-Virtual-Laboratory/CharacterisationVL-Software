@@ -1,0 +1,42 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN" "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+<Menu>
+    <Name>Applications</Name>
+    <Menu>
+        <Name>CVL</Name>
+        <Directory>cvl.directory</Directory>
+        <!-- The path to the .menu files is relative - update as required depending on your installation-->
+        <MergeFile type="parent">../applications-merged/application/3dslicer.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/apex.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/argos.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/bids-validator.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/caffe-unet.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/caffe.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/ccp-em.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/cellprofiler.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/chimerax.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/cistem.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/crisprcas.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/cryolo.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/darknet.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/dragondisk.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/drishti.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/eman.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/fiji.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/gimp.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/imagej.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/imagemagick.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/imblproc.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/imod.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/libertem.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/mango.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/mantid.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/meshlab.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/mrtrix.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/octopus.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/openrefine.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/owncloud.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/paraview.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/quit.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/volview.menu</MergeFile>
+    </Menu>
+</Menu>

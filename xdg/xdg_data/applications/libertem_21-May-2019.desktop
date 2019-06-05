@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=21-May-2019
+Name=LiberTEM 21-May-2019
+Comment=Processing of pixelated scanning transmission electron microscopy data
+Icon=LiberTEM.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-LIBERTEM

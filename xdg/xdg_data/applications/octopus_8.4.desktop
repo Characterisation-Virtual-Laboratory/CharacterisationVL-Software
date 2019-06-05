@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=8.4
+Name=Octopus 8.4
+Comment=Software for density-functional theory (DFT), and time-dependent density functional theory (TDDFT)
+Icon=oct_orange_135x96.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-OCTOPUS

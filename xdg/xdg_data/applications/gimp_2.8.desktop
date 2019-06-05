@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=2.8
+Name=Gimp 2.8
+Comment=GNU Image Manipulation Program
+Icon=gimp.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-GIMP

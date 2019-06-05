@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=2.4.1
+Name=Owncloud 2.4.1
+Comment=Owncloud client. compatible with CloudStor
+Icon=owncloud.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-OWNCLOUD

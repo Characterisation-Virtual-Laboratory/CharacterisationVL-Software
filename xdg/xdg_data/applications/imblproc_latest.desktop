@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=latest
+Name=Imblproc latest
+Comment=scripts for CT processing on IMBL of the Australian Synchrotron
+Icon=imbl-ui.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-IMBLPROC

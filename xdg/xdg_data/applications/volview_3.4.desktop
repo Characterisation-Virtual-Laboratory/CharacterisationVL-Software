@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=3.4
+Name=VolView 3.4
+Comment=Open source system for volume visualisation of 3D medical or scientific data
+Icon=VolViewIcon32.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-VOLVIEW

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=7.0.8-13
+Name=ImageMagick 7.0.8-13
+Comment=Create, edit, compose or convert bitmap images.
+Icon=ImageMagick.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-IMAGEMAGICK

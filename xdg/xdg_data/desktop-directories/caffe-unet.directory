@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Directory
+Name=Caffe U-Net
+Comment=Deep learning for cell counting, detection and morphometry
+GenericName=##e.g. Web Browser##
+Icon=caffeine-icon.png

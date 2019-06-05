@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Directory
+Name=BIDS Validator
+Comment=Brain Image Data Structure validator
+GenericName=##e.g. Web Browser##
+Icon=gnome-terminal.png

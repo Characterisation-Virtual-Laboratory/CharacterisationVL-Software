@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=##Version number of the application
+Name=##Application name followed by version number for uniqueness. e.g. 3D Slicer 4.8.1
+Comment=##The type of software. This is the tooltip.
+Icon=##An image file for the icon. Just the file name goes here.
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-APPLICATIONNAME
+##Needs to match "Category" specified in xdg_config/applications-merged/application/applicationName.menu file

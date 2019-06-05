@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=2.22
+Name=Eman 2.22
+Comment=Scientific image processing with a TEM data focus.
+Icon=EMAN2Icon.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-EMAN

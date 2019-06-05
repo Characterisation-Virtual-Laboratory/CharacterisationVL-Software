@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=5.6.0
+Name=Paraview 5.6.0
+Comment=Large data visualisation
+Icon=paraview.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-PARAVIEW

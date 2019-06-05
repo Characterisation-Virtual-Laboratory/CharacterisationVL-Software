@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=3.0.0-beta52
+Name=Argos 3.0.0-beta52
+Comment=Argos Large-scale robot simulations
+Icon=argos.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-ARGOS

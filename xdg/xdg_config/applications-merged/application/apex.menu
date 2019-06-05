@@ -1,0 +1,13 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN" "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+<Menu>
+    <Name>CVL</Name>
+    <Menu>
+        <Name>Apex</Name>
+        <Directory>apex.directory</Directory>
+        <Include>
+            <And>
+                <Category>X-CVL-APEX</Category>
+            </And>
+        </Include>
+    </Menu>
+</Menu>

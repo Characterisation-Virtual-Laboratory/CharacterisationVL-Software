@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Caffe U-Net 1.0
+Comment=Deep learning for cell counting, detection and morphometry
+Icon=caffeine-icon.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-CAFFE-UNET
