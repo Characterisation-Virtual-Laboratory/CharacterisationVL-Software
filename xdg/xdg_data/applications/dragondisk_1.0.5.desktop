@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0.5
+Name=DragonDisk 1.0.5
+Comment=Client for S3 compatible storage services
+Icon=dragondisk-48x48.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-DRAGONDISK

@@ -1,0 +1,13 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN" "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+<Menu>
+    <Name>CVL</Name>
+    <Menu>
+        <Name>Cryolo</Name>
+        <Directory>cryolo.directory</Directory>
+        <Include>
+            <And>
+                <Category>X-CVL-CRYOLO</Category>
+            </And>
+        </Include>
+    </Menu>
+</Menu>

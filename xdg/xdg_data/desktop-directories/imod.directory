@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Directory
+Name=IMOD
+Comment=Image processing, modelling and display programs for tomographic reconstruction and 3D reconstruction of EM serial and optical sections.
+GenericName=Image processing
+Icon=imod.png

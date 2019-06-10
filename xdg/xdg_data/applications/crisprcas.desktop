@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=latest
+Name=CrisprCAS latest
+Comment=CRISPR-CAS
+Icon=gnome-terminal.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-CRISPRCAS

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=3 beta
+Name=MRtrix 3 beta
+Comment=MRI analysis software
+Icon=mrtrix.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-MRTRIX

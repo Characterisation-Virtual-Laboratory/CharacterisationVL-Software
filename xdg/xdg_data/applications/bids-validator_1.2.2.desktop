@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.2.2
+Name=BIDS Validator 1.2.2
+Comment=Brain Imaging Data Structure validator
+Icon=gnome-terminal.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-BIDS-VALIDATOR

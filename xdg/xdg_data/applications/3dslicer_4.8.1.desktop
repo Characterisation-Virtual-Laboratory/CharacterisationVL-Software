@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=4.8.1
+Name=3D Slicer 4.8.1
+Comment=Image analysis and scientific visualisation
+Icon=3dslicer.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-3DSLICER

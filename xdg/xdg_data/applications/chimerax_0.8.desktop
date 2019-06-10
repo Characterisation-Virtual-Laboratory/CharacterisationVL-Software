@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=0.8
+Name=ChimeraX 0.8
+Comment=Molecular visualization program.
+Icon=ChimeraX-icon.svg
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-CHIMERAX

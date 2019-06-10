@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=3.13.0
+Name=Mantid 3.13.0
+Comment=High performance computing and visualisation of materials science data
+Icon=mantid.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-MANTID

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=2.0.2
+Name=QUIT 2.0.2
+Comment=Tools for processing quantitative MR images
+Icon=quit.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-QUIT

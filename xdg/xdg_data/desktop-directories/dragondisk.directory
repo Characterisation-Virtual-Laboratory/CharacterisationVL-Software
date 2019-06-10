@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Directory
+Name=DragonDisk
+Comment=Client for S3 compatible storage services
+GenericName=Cloud storage services client
+Icon=dragondisk-48x48.png

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=2019.03
+Name=Meshlab 2019.03
+Comment=Open source system for processing and editing 3D triangulary meshes
+Icon=meshlab.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-MESHLAB

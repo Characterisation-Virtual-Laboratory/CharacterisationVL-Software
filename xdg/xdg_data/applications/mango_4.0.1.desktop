@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=4.0.1
+Name=Mango 4.0.1
+Comment=Multi-image Analysis GUI
+Icon=mango.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-MANGO

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0.4
+Name=Cryolo 1.0.4
+Comment=Cryo-EM You Only Look Once
+Icon=cryolo_logo.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-CRYOLO
