@@ -1,0 +1,10 @@
+Caffe is a command line only program.
+
+- Open a terminal program.
+- To check available versions:
+  module avail caffe
+
+- Now run the following command for you preferred version.
+    module load caffe/versionNumber
+
+This will prepare your terminal session ready to run Caffe.

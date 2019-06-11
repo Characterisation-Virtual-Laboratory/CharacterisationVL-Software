@@ -1,0 +1,10 @@
+CrisprCAS Finder is a command line only program.
+
+- Open a terminal program.
+- To check available versions:
+  module avail crisprcas
+
+- Now run the following command for you preferred version.
+    module load crisprcas/versionNumber
+
+This will prepare your terminal session ready to run CrisprCAS Finder.

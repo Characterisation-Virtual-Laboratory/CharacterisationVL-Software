@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=latest
+Name=CrisprCAS Viewer
+Comment=CRISPR-CAS
+Icon=gnome-terminal.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg crisprcas latest "firefox /opt/CRISPRCasViewer/CRISPRCasViewer.html"
+Path=
+Terminal=
+Categories=X-CVL-CRISPRCAS

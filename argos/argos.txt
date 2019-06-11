@@ -1,0 +1,10 @@
+Argos is a command line only program.
+
+- Open a terminal program.
+- To check available versions:
+  module avail argos
+
+- Now run the following command for you preferred version.
+    module load argos/versionNumber
+
+This will prepare your terminal session ready to run Argos.
