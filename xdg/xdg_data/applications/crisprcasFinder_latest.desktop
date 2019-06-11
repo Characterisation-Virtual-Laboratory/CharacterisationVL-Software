@@ -1,10 +1,10 @@
 [Desktop Entry]
 Type=Application
 Version=latest
-Name=CrisprCAS latest
+Name=CrisprCAS Finder
 Comment=CRISPR-CAS
-Icon=gnome-terminal.png
-Exec=## this will change based on the system installation ##
+Icon=gnote.png
+Exec=xdg-open #PATH_TO_PROGRAMS#crisprcas/crisprcasfinder.txt
 Path=
 Terminal=
 Categories=X-CVL-CRISPRCAS

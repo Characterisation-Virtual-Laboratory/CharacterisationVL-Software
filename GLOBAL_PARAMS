@@ -1,0 +1,24 @@
+#GLOBAL_SITE_PARAMS - each of the following lines contain parameters that are used in building the CVL.
+#
+#  "#PATH_TO_PROGRAMS#" contains the path to where the containers are built and
+#  the .txt files. For some programs. e.g Apex, a menu entry has been created
+#  that opens the file "apex.txt". This contains an explanation that the program
+#  is command line based and how to load the module in a terminal window.
+#
+# "#DESKTOP_START_ARG_PATH#" contains the path to a file named 'desktop_start_arg'.
+#      This is used by the .desktop files to start a program in the menu.
+#      Three arguments are supplied to desktop_start_arg. 1 - program name,
+#      2 - program version and  3 - command to execute.
+#      Inside your desktop_start_arg file, that should be created for your site,
+#      arguments 1 and 2 could be used to load the module and the third to then
+#      execute the program.
+#         module load arg1/arg 2
+#         arg 3
+#
+#      The menus have been setup like this to provide a single point of customisation
+#      for your site, to avoid the need for editing all the .desktop files.
+#
+# A script will be constructed to replace these values with those in the repository.
+#
+"#PATH_TO_PROGRAMS#": "/usr/local/"
+"#DESKTOP_START_ARG_PATH#": "/usr/local/desktop/"

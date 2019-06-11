@@ -2,9 +2,9 @@
 Type=Application
 Version=master
 Name=Apex master
-Comment=Multiplatform scalable dynamics frawework
-Icon=gnome-terminal.png
-Exec=## this will change based on the system installation ##
+Comment=Multi-platform scalable dynamics framework
+Icon=gnote.png
+Exec=xdg-open #PATH_TO_PROGRAMS#apex/apex.txt
 Path=
 Terminal=
 Categories=X-CVL-APEX
