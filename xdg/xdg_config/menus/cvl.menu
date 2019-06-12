@@ -38,5 +38,6 @@
         <MergeFile type="parent">../applications-merged/application/paraview.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/quit.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/volview.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/mib.menu</MergeFile>
     </Menu>
 </Menu>
