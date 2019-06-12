@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Directory
+Name=MIB
+Comment=Image processing, segmentation and visualization of multi-dimensional (2D-4D) light and electron microscopy datasets
+GenericName=Image processing
+Icon=mib_icon.png
