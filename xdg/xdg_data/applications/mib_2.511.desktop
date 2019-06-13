@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=2.511
+Name=MIB 2.511
+Comment=Image processing, segmentation and visualization of multi-dimensional (2D-4D) light and electron microscopy datasets
+Icon=mib_icon.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg mib 2.511 "run_MIB.sh /MIB/v96"
+Path=
+Terminal=
+Categories=X-CVL-MIB
