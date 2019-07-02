@@ -15,8 +15,7 @@ From: ubuntu:16.04
     libfftw3-dev \
     libfftw3-bin \
     libopenmpi1.10 \
-    libopenmpi-dev \
-    libxc-dev
+    libopenmpi-dev 
 # Install libxc from source
     wget --output-document=libxc.tar.gz http://www.tddft.org/programs/octopus/down.php?file=libxc/4.3.4/libxc-4.3.4.tar.gz
     tar xvf libxc.tar.gz
@@ -28,8 +27,10 @@ From: ubuntu:16.04
     wget --output-document=octopus.tar.gz http://www.tddft.org/programs/octopus/down.php?file=8.4/octopus-8.4.tar.gz
     tar xf octopus.tar.gz
     cd octopus-8.4/
-    ./configure --with-libxc-prefix=/opt/etsf/
-    
+    ./configure --with-libxc-prefix=/opt/etsf/ --enable-mpi --enable-openmp
+    make 
+    make install
+     
 #    Install BLAS libraries from source
 #    wget http://www.netlib.org/blas/blas-3.8.0.tgz
 #    tar xvf blas.tgz
