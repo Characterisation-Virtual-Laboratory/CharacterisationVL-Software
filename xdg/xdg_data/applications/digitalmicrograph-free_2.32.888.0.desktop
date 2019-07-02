@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=2.32.888.0
+Name=DigitalMicrograph-free 2.32.888.0
+Comment=Analysis of (scanning) transmission electron microscope data
+Icon=digitalmicrograph_icon.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg digitalmicrograph-free 2.32.888.0 "singularity run DM_free_2.32.888.0.img"
+Path=
+Terminal=
+Categories=X-CVL-DigitalMicrograph-free
