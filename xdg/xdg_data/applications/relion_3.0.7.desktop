@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=3.0.7
+Name=Relion 3.0.7
+Comment=REgularised LIkelihood OptimisatioN
+Icon=relion.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-RELION

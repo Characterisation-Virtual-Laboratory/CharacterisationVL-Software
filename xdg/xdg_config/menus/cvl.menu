@@ -37,6 +37,7 @@
         <MergeFile type="parent">../applications-merged/application/owncloud.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/paraview.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/quit.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/relion.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/volview.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/mib.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/digitalmicrograph-free.menu</MergeFile>
