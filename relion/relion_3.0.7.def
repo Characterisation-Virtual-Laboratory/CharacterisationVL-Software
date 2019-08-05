@@ -76,9 +76,9 @@ Stage: 18.04_cuda9
     apt-get update -y
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         libfftw3-dev \
-        libtiff-dev \
-        mpi-default-bin \
-        mpi-default-dev
+        libopenmpi-dev \
+        libopenmpi2 \
+        libtiff-dev
     rm -rf /var/lib/apt/lists/*
 
 %post
@@ -186,6 +186,7 @@ Stage: final
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         ca-certificates \
         dirmngr \
+        evince \
         freeglut3 \
         gpg-agent \
         libfftw3-3 \
@@ -196,7 +197,8 @@ Stage: final
         libxi6 \
         libxmu6 \
         locales \
-        mpi-default-bin \
+        openmpi-bin \
+        openssh-server \
         software-properties-common \
         ssl-cert \
         tcsh \

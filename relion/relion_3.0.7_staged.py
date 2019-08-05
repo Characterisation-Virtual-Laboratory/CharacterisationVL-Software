@@ -75,7 +75,7 @@ Stage0 += shell(
 )
 
 # Adding in Relion 3.0.7, build from source code.
-Stage0 += apt_get(ospackages=["mpi-default-bin", "mpi-default-dev", "libfftw3-dev", "libtiff-dev"])
+Stage0 += apt_get(ospackages=["libopenmpi-dev", "libopenmpi2", "libfftw3-dev", "libtiff-dev"])
 Stage0 += shell(
     commands=[
         "mkdir -p /opt/buildRelion",
@@ -178,7 +178,7 @@ release_packages = apt_get(
                 "locales",
                 "ubuntu-desktop",
                 "freeglut3",
-                "mpi-default-bin",
+                "openmpi-bin",
                 "libtiff5",
                 "tcsh",
                 "libfftw3-3",
@@ -191,7 +191,9 @@ release_packages = apt_get(
                 "ca-certificates",
                 "ssl-cert",
                 "dirmngr",
-                "gpg-agent"])
+                "gpg-agent",
+                "evince",
+                "openssh-server"])
 Stage1 += release_packages
 
 
