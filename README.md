@@ -23,6 +23,24 @@ $ git commit -m "<software name> added as requested in support ticket"
 5. Submit merge request
 
 
+## Running GUI applications on a non-GPU node
+The applications in the Singularity container should run without the need for a dedicated GPU.
+
+However, an X server needs to be running for this to work. On nodes with GPU, X Server is started with NVIDIA driver, and on non-GPU nodes, the X Server is started with MESA library.
+
+X Server can be started during boot (for example, using `systemctl set-default graphical.target`).
+
+Make sure that VirtualGL package is installed in the container. The code below will download and install VirtualGL.
+
+```
+wget https://swift.rc.nectar.org.au:8888/v1/AUTH_810/CVL-Singularity-External-Files/virtualgl_2.6.2_amd64.deb
+
+dpkg -i virtualgl_2.6.2_amd64.deb
+```
+
+The application startup script doesn't need to be modified, however, if the application needs to be manually started, then `vglrun` needs to be appended before running the application. For example: `singularity exec --nv -B /projects:/projects -B /scratch:/scratch /usr/local/chimerax/0.8/chimerax.sif vglrun ChimeraX`
+
+
 
 
 [![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/1396)
