@@ -40,5 +40,6 @@
         <MergeFile type="parent">../applications-merged/application/volview.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/mib.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/digitalmicrograph-free.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/jmrui.menu</MergeFile>
     </Menu>
 </Menu>

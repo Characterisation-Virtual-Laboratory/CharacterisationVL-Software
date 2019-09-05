@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=5.2
+Name=jMRUI 5.2
+Comment=jMRUI is a software package for advanced time-domain analysis of magnetic resonance spectroscopy (MRS) and spectroscopic imaging (MRSI) data.
+Icon=jmrui_icon.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg jmrui 5.2 "singularity run jmrui_5.2.img"
+Path=
+Terminal=
+Categories=X-CVL-jMRUI
+Name[en_AU]=jmrui_5.2.desktop
