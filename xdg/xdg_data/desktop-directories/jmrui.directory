@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Directory
+Name=jMRUI
+Comment=jMRUI is a software package for advanced time-domain analysis of magnetic resonance spectroscopy (MRS) and spectroscopic imaging (MRSI) data.
+GenericName=MRS and MRSI processing
+Icon=jmrui_icon.png
