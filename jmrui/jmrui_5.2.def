@@ -8,8 +8,8 @@ MAINTAINER alex.joos@uwa.edu.au
 HARDWARE ?
 
 %setup
-    cp -R /home/ajoos/Desktop/Singularity/jMRUI/jmrui-5.2 ${SINGULARITY_ROOTFS}/jMRUI
-    cp /home/ajoos/Desktop/Singularity/jMRUI/jre-8u191-linux-i586.tar.gz ${SINGULARITY_ROOTFS}/
+    cp -R jmrui-5.2 ${SINGULARITY_ROOTFS}/jMRUI
+    cp jre-8u191-linux-i586.tar.gz ${SINGULARITY_ROOTFS}/
 
 %post
     echo "*********************************************************"
