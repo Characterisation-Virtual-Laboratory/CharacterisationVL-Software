@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=4.0.0
+Name=Octave
+Comment=Numerical Computations
+Icon=octave.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg octave "singularity run octave.img"
+Path=
+Terminal=
+Categories=X-CVL-OCTAVE
+Name[en_AU]=octave.desktop
