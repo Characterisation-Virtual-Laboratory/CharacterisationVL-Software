@@ -9,4 +9,4 @@
 * Prerequesites:     
             Relies on universe repository
 * Run:      
-            singularity run octave.img
+            singularity exec octave.img octave
