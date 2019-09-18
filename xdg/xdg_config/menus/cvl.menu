@@ -36,6 +36,7 @@
         <MergeFile type="parent">../applications-merged/application/openrefine.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/owncloud.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/paraview.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/protomo.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/quit.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/relion.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/volview.menu</MergeFile>
