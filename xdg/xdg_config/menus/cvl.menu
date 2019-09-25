@@ -42,5 +42,6 @@
         <MergeFile type="parent">../applications-merged/application/digitalmicrograph-free.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/jmrui.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/octave.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/dtsa2.menu</MergeFile>
     </Menu>
 </Menu>

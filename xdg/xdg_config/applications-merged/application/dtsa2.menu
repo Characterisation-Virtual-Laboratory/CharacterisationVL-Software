@@ -1,0 +1,13 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN" "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+<Menu>
+    <Name>CVL</Name>
+    <Menu>
+        <Name>DTSA-II</Name>
+        <Directory>dtsa2.directory</Directory>
+        <Include>
+            <And>
+                <Category>X-CVL-DTSA-II</Category>
+            </And>
+        </Include>
+    </Menu>
+</Menu>
