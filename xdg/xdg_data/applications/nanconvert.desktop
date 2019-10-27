@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=1
+Name=nanconvert
+Comment=Set of command-line tools for converting between neuroimaging data formats
+Icon=none
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg nanconvert "singularity exec nanconvert.img $*"
+Path=
+Terminal=
+Categories=X-CVL-nancovert
+Name[en_AU]=nanconvert.desktop
