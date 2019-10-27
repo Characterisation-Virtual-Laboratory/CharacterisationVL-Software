@@ -43,5 +43,6 @@
         <MergeFile type="parent">../applications-merged/application/jmrui.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/octave.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/dtsa2.menu</MergeFile>
+	<MergeFile type="parent">../applications-merged/application/dke.menu</MergeFile>
     </Menu>
 </Menu>

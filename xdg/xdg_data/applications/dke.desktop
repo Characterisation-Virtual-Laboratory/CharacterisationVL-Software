@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=2.6
+Name=DKE
+Comment=Post-processing of diffusional kurtosis imaging datasets
+Icon=dke_icon.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg dke "singularity exec dke.img /DKE/run_dke.sh /MCR/v717 $*"
+Path=
+Terminal=
+Categories=X-CVL-DKE
+Name[en_AU]=dke.desktop
