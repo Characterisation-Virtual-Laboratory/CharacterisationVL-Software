@@ -18,6 +18,7 @@
         <MergeFile type="parent">../applications-merged/application/crisprcas.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/cryolo.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/darknet.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/digitalmicrograph-free.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/dragondisk.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/drishti.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/eman.menu</MergeFile>
@@ -27,11 +28,14 @@
         <MergeFile type="parent">../applications-merged/application/imagemagick.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/imblproc.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/imod.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/jmrui.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/libertem.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/mango.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/mantid.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/meshlab.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/mib.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/mrtrix.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/octave.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/octopus.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/openrefine.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/owncloud.menu</MergeFile>
@@ -40,9 +44,5 @@
         <MergeFile type="parent">../applications-merged/application/quit.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/relion.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/volview.menu</MergeFile>
-        <MergeFile type="parent">../applications-merged/application/mib.menu</MergeFile>
-        <MergeFile type="parent">../applications-merged/application/digitalmicrograph-free.menu</MergeFile>
-        <MergeFile type="parent">../applications-merged/application/jmrui.menu</MergeFile>
-        <MergeFile type="parent">../applications-merged/application/octave.menu</MergeFile>
     </Menu>
 </Menu>

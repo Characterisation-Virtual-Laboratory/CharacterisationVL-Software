@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=4.2.2
+Name=Octave 4.2.2
+Comment=Scientific Programming Language
+Icon=octave.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg octave 4.2.2 "octave"
+Path=
+Terminal=
+Categories=X-CVL-OCTAVE
