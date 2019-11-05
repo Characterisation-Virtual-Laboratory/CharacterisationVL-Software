@@ -44,5 +44,6 @@
         <MergeFile type="parent">../applications-merged/application/quit.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/relion.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/volview.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/vscode.menu</MergeFile>
     </Menu>
 </Menu>
