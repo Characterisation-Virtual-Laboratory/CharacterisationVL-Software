@@ -33,7 +33,7 @@ X Server can be started during boot (for example, using `systemctl set-default g
 Make sure that VirtualGL package is installed in the container. The code below will download and install VirtualGL.
 
 ```
-wget https://swift.rc.nectar.org.au:8888/v1/AUTH_810/CVL-Singularity-External-Files/virtualgl_2.6.2_amd64.deb
+wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/virtualgl_2.6.2_amd64.deb
 
 dpkg -i virtualgl_2.6.2_amd64.deb
 ```

@@ -50,9 +50,9 @@ Include: apt wget sudo vim build-essential git sudo software-properties-common d
     echo "*********************************************************"
     echo "Installing vglrun and TurboVNC"
     echo "*********************************************************"
-    wget https://swift.rc.nectar.org.au:8888/v1/AUTH_810/CVL-Singularity-External-Files/turbovnc_2.1.2_amd64.deb
+    wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/turbovnc_2.1.2_amd64.deb
     dpkg -i turbovnc_2.1.2_amd64.deb
-    wget https://swift.rc.nectar.org.au:8888/v1/AUTH_810/CVL-Singularity-External-Files/virtualgl_2.5.2_amd64.deb
+    wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/virtualgl_2.5.2_amd64.deb
     dpkg -i virtualgl_2.5.2_amd64.deb
     apt update
     apt -y upgrade
