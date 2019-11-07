@@ -205,9 +205,9 @@ Stage1 += release_packages
 Stage1 += shell(
     commands=[
         "cd /tmp",
-        "wget https://swift.rc.nectar.org.au:8888/v1/AUTH_810/CVL-Singularity-External-Files/turbovnc_2.1.2_amd64.deb",
+        "wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/turbovnc_2.1.2_amd64.deb",
         "dpkg -i turbovnc_2.1.2_amd64.deb",
-        "wget https://swift.rc.nectar.org.au:8888/v1/AUTH_810/CVL-Singularity-External-Files/virtualgl_2.5.2_amd64.deb",
+        "wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/virtualgl_2.5.2_amd64.deb",
         "dpkg -i virtualgl_2.5.2_amd64.deb"])
 
 # Installing cuda 10.1

@@ -47,11 +47,11 @@ HARDWARE gpu
     apt-get install -y gcc-6 g++-6
     mkdir -p /tmp/cuda9
     cd /tmp/cuda9
-    wget https://swift.rc.nectar.org.au:8888/v1/AUTH_810/CVL-Singularity-External-Files/cuda_9.0.176_384.81_linux-run
-    wget https://swift.rc.nectar.org.au:8888/v1/AUTH_810/CVL-Singularity-External-Files/cuda_9.0.176.1_linux-run
-    wget https://swift.rc.nectar.org.au:8888/v1/AUTH_810/CVL-Singularity-External-Files/cuda_9.0.176.2_linux-run
-    wget https://swift.rc.nectar.org.au:8888/v1/AUTH_810/CVL-Singularity-External-Files/cuda_9.0.176.3_linux-run
-    wget https://swift.rc.nectar.org.au:8888/v1/AUTH_810/CVL-Singularity-External-Files/cuda_9.0.176.4_linux-run
+    wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/cuda_9.0.176_384.81_linux-run
+    wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/cuda_9.0.176.1_linux-run
+    wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/cuda_9.0.176.2_linux-run
+    wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/cuda_9.0.176.3_linux-run
+    wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/cuda_9.0.176.4_linux-run
     chmod +x *
     ./cuda_9.0.176_384.81_linux-run --tmpdir=/tmp/cuda9/ --toolkitpath=/usr/local/cuda9/ --toolkit --samples --samplespath=/usr/local/cuda9/ --silent --override
     ./cuda_9.0.176.1_linux-run --installdir=/usr/local/cuda9/ --accept-eula --silent
@@ -69,9 +69,9 @@ HARDWARE gpu
     echo "*********************************************************"
     echo "Installing vglrun and TurboVNC"
     echo "*********************************************************"
-    wget https://swift.rc.nectar.org.au:8888/v1/AUTH_810/CVL-Singularity-External-Files/turbovnc_2.1.2_amd64.deb
+    wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/turbovnc_2.1.2_amd64.deb
     dpkg -i turbovnc_2.1.2_amd64.deb
-    wget https://swift.rc.nectar.org.au:8888/v1/AUTH_810/CVL-Singularity-External-Files/virtualgl_2.5.2_amd64.deb
+    wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/virtualgl_2.5.2_amd64.deb
     dpkg -i virtualgl_2.5.2_amd64.deb
     apt update
     apt -y upgrade
