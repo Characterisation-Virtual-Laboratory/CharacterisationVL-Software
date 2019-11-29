@@ -3,6 +3,10 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 OSVersion:  bionic
 Include: apt wget
 
+%labels
+    MAINTAINER_NAME  Jay van Schyndel
+    MAINTAINER_EMAIL jay.vanschyndel@monash.edu
+
 %environment
  
 %post
