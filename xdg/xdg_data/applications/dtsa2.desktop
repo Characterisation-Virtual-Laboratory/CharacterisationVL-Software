@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=2019-07-29
+Name=DTSA-II
+Comment=Quantitative X-ray microanalysis
+Icon=dtsa2_icon.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg dtsa2 "singularity exec -B NIST:/NIST dtsa2.img java -jar /NIST/NIST_DTSA-II_Lorentz_2019-07-29/dtsa2.jar"
+Path=
+Terminal=
+Categories=X-CVL-DTSA-II
+Name[en_AU]=dtsa2.desktop

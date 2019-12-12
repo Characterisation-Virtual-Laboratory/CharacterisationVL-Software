@@ -19,8 +19,10 @@
         <MergeFile type="parent">../applications-merged/application/cryolo.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/darknet.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/digitalmicrograph-free.menu</MergeFile>
+	      <MergeFile type="parent">../applications-merged/application/dke.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/dragondisk.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/drishti.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/dtsa2.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/eman.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/fiji.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/gimp.menu</MergeFile>
@@ -34,7 +36,8 @@
         <MergeFile type="parent">../applications-merged/application/mantid.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/meshlab.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/mib.menu</MergeFile>
-        <MergeFile type="parent">../applications-merged/application/mrtrix.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/mrtrix.menu</MergeFile>	
+        <MergeFile type="parent">../applications-merged/application/nanconvert.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/octave.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/octopus.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/openrefine.menu</MergeFile>

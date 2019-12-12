@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Directory
+Name=nanconvert
+Comment=Set of command-line tools for converting between neuroimaging data formats
+GenericName=Data format conversion
+Icon=none
