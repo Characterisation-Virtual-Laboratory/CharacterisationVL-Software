@@ -1,7 +1,5 @@
-Bootstrap: debootstrap
-MirrorURL: http://us.archive.ubuntu.com/ubuntu/
-OSVersion:  bionic
-Include: apt wget sudo vim build-essential git sudo software-properties-common dirmngr gpg-agent
+Bootstrap: shub
+From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-cuda9
 
 %labels
     MAINTAINER_NAME  Jay van Schyndel
@@ -10,13 +8,13 @@ Include: apt wget sudo vim build-essential git sudo software-properties-common d
     APPLICATION_NAME ubuntu
     APPLICATION_VERSION 18.04
 
-    HARDWARE cpu
+    HARDWARE GPU
 
-    LAST_UPDATED 19-MAR-2019
+    LAST_UPDATED 15-OCT-2019
 
 %environment
 
-%post
+%post -c /bin/bash
     echo "*********************************************************"
     echo "Setup and display environment"
     echo "*********************************************************"
@@ -41,21 +39,15 @@ Include: apt wget sudo vim build-essential git sudo software-properties-common d
     apt upgrade -y
     apt install -y locales
     locale-gen en_AU.UTF-8
-    apt install -y wget ubuntu-desktop vim software-properties-common git cmake mesa-utils
 
-    echo "*********************************************************"
-    echo "Installing python dependencies"
-    echo "*********************************************************"
-    apt install -y python-pip python-pyqt5 pyqt5-dev python-tk
-    echo "*********************************************************"
-    echo "Installing vglrun and TurboVNC"
-    echo "*********************************************************"
-    wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/turbovnc_2.1.2_amd64.deb
-    dpkg -i turbovnc_2.1.2_amd64.deb
-    wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/virtualgl_2.5.2_amd64.deb
-    dpkg -i virtualgl_2.5.2_amd64.deb
-    apt update
-    apt -y upgrade
+    echo "########################################"
+    echo "# Installing liberTEM - v0.2.2         #"
+    echo "########################################"
+
+    #echo "Installing dependencies"
+    apt install -y python3-venv python3-pip
+
+    pip3 install libertem[torch,pyfftw]==0.2.2
 
 %runscript
     $*

@@ -42,9 +42,9 @@ MirrorURL: http://au.archive.ubuntu.com/ubuntu/
     apt update
     apt upgrade -y
     apt install -y locales wget
-    wget https://swift.rc.nectar.org.au:8888/v1/AUTH_810/CVL-Singularity-External-Files/turbovnc_2.1.2_amd64.deb
+    wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/turbovnc_2.1.2_amd64.deb
     dpkg -i turbovnc_2.1.2_amd64.deb
-    wget https://swift.rc.nectar.org.au:8888/v1/AUTH_810/CVL-Singularity-External-Files/virtualgl_2.5.2_amd64.deb
+    wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/virtualgl_2.5.2_amd64.deb
     dpkg -i virtualgl_2.5.2_amd64.deb
     apt update
     apt -y upgrade

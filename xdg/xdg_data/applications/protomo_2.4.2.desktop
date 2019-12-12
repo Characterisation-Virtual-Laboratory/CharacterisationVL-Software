@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=2.4.2
+Name=Protomo 2.4.2
+Comment=Large data processing
+Icon=gnome-terminal.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-PROTOMO

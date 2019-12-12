@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.39.2
+Name=Visual Studio Code 1.39.2
+Comment=Integrated Development Environment
+Icon=gnome-terminal.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg vscode 1.39.2 "code"
+Path=
+Terminal=
+Categories=X-CVL-VSCODE

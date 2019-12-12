@@ -1,7 +1,5 @@
-Bootstrap: debootstrap
-MirrorURL: http://us.archive.ubuntu.com/ubuntu/
-OSVersion:  bionic
-Include: apt wget sudo vim build-essential git sudo software-properties-common dirmngr gpg-agent
+Bootstrap: shub
+From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-cuda9
 
 %labels
     MAINTAINER_NAME  Jay van Schyndel
@@ -10,11 +8,22 @@ Include: apt wget sudo vim build-essential git sudo software-properties-common d
     APPLICATION_NAME ubuntu
     APPLICATION_VERSION 18.04
 
-    HARDWARE cpu
+    HARDWARE GPU
 
-    LAST_UPDATED 19-MAR-2019
+    LAST_UPDATED 14-OCT-2019
+
+%files
+    #eman2Install.exp /tmp/
+    input.txt /tmp/
 
 %environment
+    export PATH=/opt/eman/bin:$PATH
+    export CONDA_SHLVL=1
+    export CONDA_EXE=/opt/eman/bin/conda
+    export CONDA_PREFIX=/opt/eman
+    export CONDA_PYTHON_EXE=/opt/eman/bin/python
+    #export CONDA_PROMPT_MODIFIER=(base)
+    export CONDA_DEFAULT_ENV=base
 
 %post
     echo "*********************************************************"
@@ -41,21 +50,20 @@ Include: apt wget sudo vim build-essential git sudo software-properties-common d
     apt upgrade -y
     apt install -y locales
     locale-gen en_AU.UTF-8
-    apt install -y wget ubuntu-desktop vim software-properties-common git cmake mesa-utils
 
-    echo "*********************************************************"
-    echo "Installing python dependencies"
-    echo "*********************************************************"
-    apt install -y python-pip python-pyqt5 pyqt5-dev python-tk
-    echo "*********************************************************"
-    echo "Installing vglrun and TurboVNC"
-    echo "*********************************************************"
-    wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/turbovnc_2.1.2_amd64.deb
-    dpkg -i turbovnc_2.1.2_amd64.deb
-    wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/virtualgl_2.5.2_amd64.deb
-    dpkg -i virtualgl_2.5.2_amd64.deb
-    apt update
-    apt -y upgrade
+    echo "================================"
+    echo "Downloading EMAN 2.3            "
+    echo "================================"
+    cd /tmp
+    wget https://cryoem.bcm.edu/cryoem/static/software/release-2.31/eman2.31_sphire1.3.linux64.sh
+    chmod u+x eman2.31_sphire1.3.linux64.sh
+
+    echo "================================"
+    echo "Installing EMAN 2.3.1           "
+    echo "================================"
+    export PATH=/opt/eman/bin:$PATH
+    #expect eman2Install.exp
+    cat input.txt | bash eman2.31_sphire1.3.linux64.sh    
 
 %runscript
     $*
