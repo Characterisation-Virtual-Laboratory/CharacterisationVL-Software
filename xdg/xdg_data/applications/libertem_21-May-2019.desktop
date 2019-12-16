@@ -3,7 +3,7 @@ Type=Application
 Version=21-May-2019
 Name=LiberTEM 21-May-2019
 Comment=Processing of pixelated scanning transmission electron microscopy data
-Icon=LiberTEM.png
+Icon="LiberTEM logo icon.svg"
 Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg libertem 21-May-2019 "libertem-server --local_directory=$HOME/dask-worker-space"
 Path=
 Terminal=
