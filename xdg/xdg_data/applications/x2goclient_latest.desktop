@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=latest
+Name=X2GO Client
+Comment=Remote Desktop client
+Icon=x2goclient.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg x2goclient latest "x2goclient"
+Path=
+Terminal=
+Categories=X-CVL-X2GOCLIENT
