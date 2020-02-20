@@ -1,6 +1,6 @@
 ## Installation README
 
-* Website:  
+* Website:  The Cloudstor service operated by AARNET uses the Owncloud software.
             https://owncloud.org
 * Source:   
             https://software.opensuse.org/download/package?project=isv:ownCloud:desktop&package=owncloud-client

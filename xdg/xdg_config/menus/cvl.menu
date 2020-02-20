@@ -7,6 +7,7 @@
         <!-- The path to the .menu files is relative - update as required depending on your installation-->
         <MergeFile type="parent">../applications-merged/application/3dslicer.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/apex.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/amide.menu</MergeFile>        
         <MergeFile type="parent">../applications-merged/application/argos.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/bids-validator.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/caffe-unet.menu</MergeFile>
@@ -15,6 +16,7 @@
         <MergeFile type="parent">../applications-merged/application/cellprofiler.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/chimerax.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/cistem.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/cloudstor.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/crisprcas.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/cryolo.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/darknet.menu</MergeFile>
@@ -41,7 +43,6 @@
         <MergeFile type="parent">../applications-merged/application/octave.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/octopus.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/openrefine.menu</MergeFile>
-        <MergeFile type="parent">../applications-merged/application/owncloud.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/paraview.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/protomo.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/quit.menu</MergeFile>

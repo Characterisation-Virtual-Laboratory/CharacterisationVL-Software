@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0.5
+Name=Amide 1.0.5
+Comment=AMIDE - A Medical Imaging Data Examiner
+Icon=amide_file_logo128x128.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg amide 1.0.5 "amide"
+Path=
+Terminal=
+Categories=X-CVL-AMIDE
