@@ -2,11 +2,11 @@
 <Menu>
     <Name>CVL</Name>
     <Menu>
-        <Name>Owncloud</Name>
-        <Directory>owncloud.directory</Directory>
+        <Name>Cloudstor</Name>
+        <Directory>cloudstor.directory</Directory>
         <Include>
             <And>
-                <Category>X-CVL-OWNCLOUD</Category>
+                <Category>X-CVL-CLOUDSTOR</Category>
             </And>
         </Include>
     </Menu>
