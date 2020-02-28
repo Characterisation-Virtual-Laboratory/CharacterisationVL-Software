@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=4.10.2
+Name=3D Slicer 4.10.2
+Comment=Image analysis and scientific visualisation
+Icon=3dslicer.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg 3dslicer 4.10.2 "Slicer"
+Path=
+Terminal=
+Categories=X-CVL-3DSLICER
