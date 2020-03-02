@@ -7,8 +7,9 @@
         <!-- The path to the .menu files is relative - update as required depending on your installation-->
         <MergeFile type="parent">../applications-merged/application/3dslicer.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/apex.menu</MergeFile>
-        <MergeFile type="parent">../applications-merged/application/amide.menu</MergeFile>        
+        <MergeFile type="parent">../applications-merged/application/amide.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/argos.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/ariba.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/bids-validator.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/caffe-unet.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/caffe.menu</MergeFile>
