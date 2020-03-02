@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=2.12.1
+Name=Amide 2.12.1
+Comment=ARIBA - Antimicrobial Resistance Identification By Assembly
+Icon=gnome-terminal.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg ariba 2.12.1 "ariba"
+Path=
+Terminal=
+Categories=X-CVL-ARIBA
