@@ -10,7 +10,7 @@
             GPL v3 - https://github.com/LiberTEM/LiberTEM/blob/master/LICENSE
 
 * Run:      
-            singularity exec imageFileName.simg libertem-server --local-directory=$HOME/dask-worker-space
+            singularity exec --nv imageFileName.simg libertem-server --local-directory=$HOME/dask-worker-space
 
-            Using your favourite web browser connect to: http://localhost:9000 
+            Using your favourite web browser connect to: http://localhost:9000
             Note: --local-directory must be set to a writable directory.
