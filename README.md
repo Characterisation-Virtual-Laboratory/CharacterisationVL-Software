@@ -15,6 +15,7 @@ $ git branch <software name>
  * Singularity definition file or installation script
  * Readme file including install and testing notes
  * Desktop files for adding to menus with necessary tags
+ * For details, please refer to the 'template' folder in the repository
 4. Commit all changes, including a helpful message
 5. Check singularity hub for completed build.
 ```
