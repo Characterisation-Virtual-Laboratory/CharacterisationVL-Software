@@ -8,7 +8,7 @@
             https://imagej.net/Fiji#License
             https://imagej.net/Licensing
 * Run:      
-            singularity exec imageFileName.simg ImageJ-linux64
+            singularity exec --nv imageFileName.simg ImageJ-linux64
 
 * Test:     
-            singularity exec imageFileName.simg ImageJ-linux64
+            singularity exec --nv imageFileName.simg ImageJ-linux64

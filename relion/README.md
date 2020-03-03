@@ -26,10 +26,10 @@
 
 
 * Run:      
-            singularity exec imageFileName.simg relion
+            singularity exec --nv imageFileName.simg relion
 
 * Test:     
-            singularity exec imageFileName.simg relion
+            singularity exec --nv imageFileName.simg relion
 
 * Examples:
             Refer to the Relion website to access the Relion tutorial documentation.

@@ -7,7 +7,7 @@
 * Licence:  
             GPL v3 - https://www.gimp.org/docs/userfaq.html#whats-the-gimps-license-and-how-do-i-comply-with-it
 * Run:      
-            singularity exec imageFileName.simg gimp
+            singularity exec --nv imageFileName.simg gimp
 
 * Test:     
-            singularity exec imageFileName.simg gimp
+            singularity exec --nv imageFileName.simg gimp

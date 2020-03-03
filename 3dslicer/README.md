@@ -10,10 +10,10 @@
             BSD-style open source licence: https://www.slicer.org/wiki/License
 
 * Run:      
-            singularity exec imageFileName.simg Slicer
+            singularity exec --nv imageFileName.simg Slicer
 
 * Test:     
-            singularity exec imageFileName.simg Slicer
+            singularity exec --nv imageFileName.simg Slicer
 
 * Examples:
             https://www.slicer.org/wiki/New_users

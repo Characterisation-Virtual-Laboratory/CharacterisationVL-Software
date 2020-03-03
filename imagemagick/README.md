@@ -7,7 +7,7 @@
 * Licence:  
             https://imagemagick.org/script/license.php
 * Run:      
-            singularity exec imageFileName.simg magick -help
+            singularity exec --nv imageFileName.simg magick -help
 
 * Test:     
-            singularity exec imageFileName.simg magick -help
+            singularity exec --nv imageFileName.simg magick -help

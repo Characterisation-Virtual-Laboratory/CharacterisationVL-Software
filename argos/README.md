@@ -7,10 +7,10 @@
 * Licence:  
             https://opensource.org/licenses/MIT as detailed on https://www.argos-sim.info/index.php
 * Run:      
-            singularity exec imageFileName.simg argos3 --help
+            singularity exec --nv imageFileName.simg argos3 --help
 
 * Test:     
-            singularity exec imageFileName.simg argos3 -c /opt/argos3/argos3-examples/experiments/diffusion_1.argos
+            singularity exec --nv imageFileName.simg argos3 -c /opt/argos3/argos3-examples/experiments/diffusion_1.argos
 
 * Examples:
             https://www.argos-sim.info/examples.php
