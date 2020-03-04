@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.13
+Name=Chimera 1.13
+Comment=Molecular visualization program.
+Icon=Chimera512.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg chimera 1.13 "chimera"
+Path=
+Terminal=
+Categories=X-CVL-CHIMERA

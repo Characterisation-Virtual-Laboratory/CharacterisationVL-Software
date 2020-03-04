@@ -15,6 +15,7 @@
         <MergeFile type="parent">../applications-merged/application/caffe.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/ccp-em.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/cellprofiler.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/chimera.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/chimerax.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/cistem.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/cloudstor.menu</MergeFile>
