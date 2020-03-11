@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=latest
+Name=Matlab
+Comment=Matlab
+Icon=matlab.jpeg
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg matlab latest "matlab"
+Path=
+Terminal=
+Categories=X-CVL-X2GOCLIENT
