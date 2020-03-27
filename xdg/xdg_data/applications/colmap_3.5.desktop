@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=3.5
+Name=Colmap 3.5
+Comment=Structure-from-Motion (SfM) and Multi-View Stereo (MVS) pipeline
+Icon=gnome-terminal.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg colmap 3.5 "colmap gui"
+Path=
+Terminal=
+Categories=X-CVL-COLMAP
