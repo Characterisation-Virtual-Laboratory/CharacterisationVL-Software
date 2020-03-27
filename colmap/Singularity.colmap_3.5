@@ -1,14 +1,12 @@
-Bootstrap: localimage
-From:      /mnt/share/CharacterisationVL-Software/ubuntu-base-image/1804-cuda10.1.sif
-#Bootstrap: shub
-#From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-cuda10.1
+Bootstrap: shub
+From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-cuda10.1
 
 %labels
 MAINTAINER jay.vanschyndel@monash.edu
 HARDWARE   gpu
 
 %environment
-    
+
 %post
     echo "==========================="
     echo " Installing dependencies   "
@@ -18,7 +16,7 @@ HARDWARE   gpu
                    libboost-system-dev libboost-test-dev libeigen3-dev libsuitesparse-dev libfreeimage-dev \
                    libglew-dev libgflags-dev libgoogle-glog-dev qtbase5-dev libqt5opengl5-dev libcgal-dev
     apt install -y libcgal-qt5-dev
- 
+
     echo "==========================="
     echo " Installing Ceres Solver   "
     echo "==========================="
