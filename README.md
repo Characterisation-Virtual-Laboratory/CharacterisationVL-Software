@@ -23,6 +23,41 @@ $ git commit -m "<software name> added as requested in support ticket"
 ```
 5. Submit merge request
 
+## Naming your Singularity definition file, Singularity Hub and Licensing
+For all Singularity recipes where the software licensing permits redistribution, please use this naming convention:
+
+```
+   Singularity.applicationName_version
+   Singularity.applicationName_version-cuda-cudaVersion
+
+```
+
+This is where Singularity Hub fits into the equation. There is a webhook between this repository and Singularity Hub (https://singularity-hub.org/ ). When a commit is merged into the master branch, Singularity Hub will build the container.
+
+If successfully built, the path to the container on Singularity Hub is:
+
+```
+  singularity pull shub://Characterisation-Virtual-Laboratory/CharacterisationVL-Software:applicationName_version
+  singularity pull shub://Characterisation-Virtual-Laboratory/CharacterisationVL-Software:applicationName_version-cuda-cudaVersion
+
+```
+
+For software where licensing does not support redistribution, the container
+recipe can still be defined, but the container should not be built.
+
+An example on how to handle this situation is the recipe for CCP-EM.
+The README.md contains a section on Prerequisites. This section lists the required files to build the container. The license must be accepted by the end user to obtain them.
+
+Prerequisite files should not be committed to this repository.
+
+To prevent Singularity Hub from attempting to build the container, we simply use a different recipe naming convention as follows:
+
+```
+   applicationName_version.def
+   applicationName_version-cuda-cudaVersion.def
+
+```
+
 
 ## Running GUI applications on a non-GPU node
 The applications in the Singularity container should run without the need for a dedicated GPU.

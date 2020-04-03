@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Directory
+Name=Colmap
+Comment=Structure-from-Motion (SfM) and Multi-View Stereo (MVS) pipeline
+GenericName=Colmap
+Icon=gnome-terminal.png
