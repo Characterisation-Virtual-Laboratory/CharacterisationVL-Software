@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.39.1
+Name=Atom 1.39.1
+Comment=A hackable text editor
+Icon=atom.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg atom 1.39.1 "atom"
+Path=
+Terminal=
+Categories=X-CVL-ATOM
