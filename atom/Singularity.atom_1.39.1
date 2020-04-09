@@ -6,7 +6,7 @@ MAINTAINER jay.vanschyndel@monash.edu
 HARDWARE   cpu
 
 %environment
-    export PATH=/opt/atom-1.39.0-amd64:$PATH
+    export PATH=/opt/atom-1.39.1-amd64:$PATH
 
 %post
     echo "==========================="
@@ -17,9 +17,10 @@ HARDWARE   cpu
                    libnotify4 libxtst6 libnss3 python gvfs-bin xdg-utils libcap2
 
     cd /tmp
-    wget https://github.com/atom/atom/releases/download/v1.39.0/atom-amd64.tar.gz
-    mkdir -p /opt/atom
+    wget https://github.com/atom/atom/releases/download/v1.39.1/atom-amd64.tar.gz
+    mkdir -p /opt
     tar -C /opt -xf atom-amd64.tar.gz
+    rm atom-amd64.tar.gz
 
 %runscript
     $*

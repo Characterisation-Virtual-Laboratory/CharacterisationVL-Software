@@ -18,8 +18,9 @@ HARDWARE   cpu
 
     cd /tmp
     wget https://github.com/atom/atom/releases/download/v1.45.0/atom-amd64.tar.gz
-    mkdir -p /opt/atom
+    mkdir -p /opt
     tar -C /opt -xf atom-amd64.tar.gz
+    rm atom-amd64.tar.gz
 
 %runscript
     $*
