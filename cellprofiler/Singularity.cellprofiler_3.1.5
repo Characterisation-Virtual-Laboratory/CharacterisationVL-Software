@@ -43,11 +43,11 @@ HARDWARE gpu
  cd /opt/
  git clone https://github.com/CellProfiler/CellProfiler.git
  cd CellProfiler
- git checkout master
+ git checkout v3.1.5
  sed -i -e 's/1.0.17/1.0.14/g' requirements.txt
  pip --disable-pip-version-check install --editable .
  pip install --upgrade pillow
  pip install javabridge==1.0.14
- 
+
 %runscript
     $*

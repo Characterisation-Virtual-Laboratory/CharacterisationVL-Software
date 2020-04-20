@@ -1,0 +1,52 @@
+# run: conda env create -f environment.yml
+# run: conda env update -f environment.yml
+# run: conda env remove -n cellprofiler
+#name: cellprofiler
+name: base
+# in order of priority: highest (top) to lowest (bottom)
+channels:
+  - anaconda
+  - goodman # mysql-python for mac
+  - bioconda
+  - cyclus # java-jdk for windows
+  - conda-forge # libxml2 for windows
+  - daf # wxpython for linux
+# - BjornFJohansson # wxpython for linux not longer available
+dependencies:
+  - appdirs
+  - boto3
+  - cython
+  - h5py
+  - ipywidgets
+  - java-jdk
+  - joblib
+  - jupyter
+  - libtiff
+  - libxml2
+  - libxslt
+  - lxml
+  - packaging
+  - pillow
+  - pip
+  - python=2
+  - pyzmq=15.3.0
+  - mahotas
+  - matplotlib!=2.1.0,>2.0.0
+  - mysqlclient
+  - numpy=1.16.0
+  - raven
+  - requests
+  - scikit-image=0.14.2
+  - scikit-learn
+  - scipy
+  - sphinx
+  - tifffile
+  - wxpython=3.0.2.0
+  - pip:
+    - cellh5
+    - centrosome==1.1.6
+    - inflect
+    - prokaryote==2.4.0
+    - javabridge==1.0.15
+    - python-bioformats==1.4.0
+    - git+https://github.com/CellProfiler/CellProfiler.git@v3.1.9
