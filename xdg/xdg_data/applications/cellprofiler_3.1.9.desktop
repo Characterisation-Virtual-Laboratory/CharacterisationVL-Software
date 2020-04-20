@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=3.1.9
+Name=Cell Profiler 3.1.9
+Comment=Cell image analysis
+Icon=CellProfiler.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg cellprofiler 3.1.9 "cellprofiler"
+Path=
+Terminal=
+Categories=X-CVL-CELLPROFILER
