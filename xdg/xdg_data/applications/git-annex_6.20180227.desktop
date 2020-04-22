@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=6.20180227
+Name=Git Annex 6.20180227
+Comment=Source management
+Icon=gnome-terminal.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg git-annex 6.20180227 "git-annex"
+Path=
+Terminal=
+Categories=X-CVL-GIT-ANNEX
