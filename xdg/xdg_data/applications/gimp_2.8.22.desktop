@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=2.8.22
+Name=Gimp 2.8.22
+Comment=GNU Image Manipulation Program
+Icon=gimp.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg gimp 2.8.22 "gimp"
+Path=
+Terminal=
+Categories=X-CVL-GIMP
