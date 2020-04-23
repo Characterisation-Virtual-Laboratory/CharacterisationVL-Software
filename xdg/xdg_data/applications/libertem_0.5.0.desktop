@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=0.5.0
+Name=LiberTEM 0.5.0
+Comment=Processing of pixelated scanning transmission electron microscopy data
+Icon="LiberTEM logo icon.svg"
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg libertem 0.5.0 "libertem-server --local-directory=$HOME/dask-worker-space"
+Path=
+Terminal=
+Categories=X-CVL-LIBERTEM
