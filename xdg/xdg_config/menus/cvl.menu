@@ -32,6 +32,8 @@
         <MergeFile type="parent">../applications-merged/application/eman.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/fiji.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/gimp.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/git-annex.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/graphviz.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/imagej.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/imagemagick.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/imblproc.menu</MergeFile>

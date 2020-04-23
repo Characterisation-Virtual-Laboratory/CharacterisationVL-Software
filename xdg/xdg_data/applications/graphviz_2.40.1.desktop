@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=2.40.1
+Name=Graphviz 2.40.1
+Comment=graph visualisation software
+Icon=graphviz.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg graphviz 2.40.1 "dot"
+Path=
+Terminal=
+Categories=X-CVL-GRAPHVIZ
