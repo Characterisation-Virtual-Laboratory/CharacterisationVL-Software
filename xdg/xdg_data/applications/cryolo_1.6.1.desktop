@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.6.1
+Name=Cryolo 1.6.1
+Comment=Cryo-EM You Only Look Once
+Icon=gnote.png
+Exec=xdg-open #PATH_TO_PROGRAMS#cryolo/cryolo.txt
+Path=
+Terminal=
+Categories=X-CVL-CRYOLO
