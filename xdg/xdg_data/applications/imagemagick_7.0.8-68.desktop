@@ -1,9 +1,9 @@
 [Desktop Entry]
 Type=Application
-Version=7.0.8-13
-Name=ImageMagick 7.0.8-13
+Version=7.0.8-68
+Name=ImageMagick 7.0.8-68
 Comment=Create, edit, compose or convert bitmap images.
-Icon=gnote.png
+Icon=ImageMagick.png
 Exec=xdg-open #PATH_TO_PROGRAMS#imagemagick/imagemagick.txt
 Path=
 Terminal=
