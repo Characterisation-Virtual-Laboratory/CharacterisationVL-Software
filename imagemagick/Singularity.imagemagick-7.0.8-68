@@ -24,7 +24,7 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-
     echo "================================="
     echo "Extracting  ImageMagick 7.0.8-68 "
     echo "================================="
-    tar zxvf ImageMagick-7.0.8-68.tar.xz
+    tar -xf ImageMagick-7.0.8-68.tar.xz
 
     cd ImageMagick-7.0.8-68
 
