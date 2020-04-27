@@ -24,6 +24,7 @@
         <MergeFile type="parent">../applications-merged/application/colmap.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/crisprcas.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/cryolo.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/cytoscape.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/darknet.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/digitalmicrograph-free.menu</MergeFile>
 	<MergeFile type="parent">../applications-merged/application/dke.menu</MergeFile>
