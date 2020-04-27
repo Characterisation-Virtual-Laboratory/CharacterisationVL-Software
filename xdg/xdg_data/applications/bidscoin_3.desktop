@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=3
+Name=BIDSCoin
+Comment=Coin your imaging data to BIDS
+Icon=bidscoin.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg dke "singularity exec dke.img /DKE/run_dke.sh /MCR/v717 $*"
+Path=
+Terminal=
+Categories=X-CVL-BIDSCOIN
+Name[en_AU]=bidscoin_3.desktop

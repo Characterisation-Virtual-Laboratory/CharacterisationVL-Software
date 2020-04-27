@@ -11,6 +11,7 @@
         <MergeFile type="parent">../applications-merged/application/argos.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/ariba.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/atom.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/bidscoin.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/bids-validator.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/caffe-unet.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/caffe.menu</MergeFile>
