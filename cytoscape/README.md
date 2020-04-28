@@ -11,10 +11,10 @@
 * Prerequisites:
 
 * Run:      
-            singularity exec imageFileName.simg commandToRunSoftware
+            singularity exec cytoscape.sif cytoscape.sh
 
 * Test:     
-            singularity exec imageFileName.simg commandToTestSoftware
+            singularity exec cytoscape.sof cytoscape.sh
 
 * Examples:
             https://github.com/cytoscape/cytoscape-tutorials/wiki

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=3.8.0
+Name=Cytoscape 3.8.0
+Comment=Large data processing
+Icon=cytoscape.svg
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-CYTOSCAPE
