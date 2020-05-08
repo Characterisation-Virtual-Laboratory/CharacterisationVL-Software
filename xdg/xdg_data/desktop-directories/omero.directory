@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Directory
+Name=Omero
+Comment=You can use the OMERO.insight client to upload, view and download data from any personal computer
+GenericName=##e.g. Web Browser##
+Icon=omero.svg
