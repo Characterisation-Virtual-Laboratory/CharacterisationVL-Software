@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=5.5.10
+Name=Omero Insight
+Comment=REgularised LIkelihood OptimisatioN
+Icon=omero.svg
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-OMERO
