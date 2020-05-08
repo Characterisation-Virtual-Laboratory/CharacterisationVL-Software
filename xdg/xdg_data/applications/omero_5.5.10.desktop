@@ -2,7 +2,7 @@
 Type=Application
 Version=5.5.10
 Name=Omero Insight
-Comment=REgularised LIkelihood OptimisatioN
+Comment=You can use the OMERO.insight client to upload, view and download data from any personal computer
 Icon=omero.svg
 Exec=## this will change based on the system installation ##
 Path=
