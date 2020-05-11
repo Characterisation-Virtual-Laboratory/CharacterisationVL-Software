@@ -51,7 +51,7 @@ If successfully built, the path to the container on Singularity Hub is:
 For software where licensing does not support redistribution, the container recipe can still be defined, but the container should not be built on Singularity Hub.
 
 An example on how to handle this situation is the recipe for CCP-EM.
-The [README.md](CCP_EM/README.md) contains a section on Prerequisites. This section lists the required files to build the container. The license must be accepted by the end user to obtain them.
+The [README.md](ccp-em/README.md) contains a section on Prerequisites. This section lists the required files to build the container. The license must be accepted by the end user to obtain them.
 
 Prerequisite files should not be committed to this repository.
 
