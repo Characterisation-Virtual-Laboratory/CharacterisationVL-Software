@@ -1,27 +1,33 @@
 # CharacterisationVL-Software
-The purpose of this repository is for storing definition files to submit to singularity hub.
+The purpose of this repository is for storing definition files to submit to [Singularity Hub.](https://singularity-hub.org/)
 
-Each software package is located in its own folder. The files are tagged with the software name and version number or date of build.
+If you are new to Singularity containers, please refer to [https://sylabs.io/guides/3.5/user-guide/](https://sylabs.io/guides/3.5/user-guide/) or a newer version of this documentation.
 
-To add software to the repository you will need to create a new branch. The new branch will be checked and merged.
+Each software package is located in its own folder. The files are tagged with the software name and version number or date of build. Please read below for the naming convention.
+
+To add software to the repository you will need to create a new branch. The new branch is the name of the software product. By convention, the new branch will be checked and merged into the master branch and then deleted.
 
 ## Steps to add a software package
-1. Create a branch
+1. Clone this repository
+2. Create a branch
 ```
 $ git branch <software name>
 ```
-2. Make a subdirectory
-3. Add all the necessary files
+3. Make a subdirectory for the software product.
+```
+$ mkdir <software name>
+```
+4. Add all the necessary files.
  * Singularity definition file or installation script
  * Readme file including install and testing notes
  * Desktop files for adding to menus with necessary tags
- * For details, please refer to the 'template' folder in the repository
+ * For full details, [please refer to the 'template' folder in this repository.](template/README.md)
 4. Commit all changes, including a helpful message
-5. Check singularity hub for completed build.
 ```
 $ git commit -m "<software name> added as requested in support ticket"
 ```
-5. Submit merge request
+6. Push to the remote repository. i.e. this one.
+7. Submit merge request
 
 ## Naming your Singularity definition file, Singularity Hub and Licensing
 For all Singularity recipes where the software licensing permits redistribution, please use this naming convention:
@@ -32,7 +38,7 @@ For all Singularity recipes where the software licensing permits redistribution,
 
 ```
 
-This is where Singularity Hub fits into the equation. There is a webhook between this repository and Singularity Hub (https://singularity-hub.org/ ). When a commit is merged into the master branch, Singularity Hub will build the container.
+This is where Singularity Hub fits into the equation. There is a webhook between this repository and [Singularity Hub](https://singularity-hub.org/). When a commit is merged into the master branch, Singularity Hub will build the container.
 
 If successfully built, the path to the container on Singularity Hub is:
 
@@ -42,11 +48,10 @@ If successfully built, the path to the container on Singularity Hub is:
 
 ```
 
-For software where licensing does not support redistribution, the container
-recipe can still be defined, but the container should not be built.
+For software where licensing does not support redistribution, the container recipe can still be defined, but the container should not be built on Singularity Hub.
 
 An example on how to handle this situation is the recipe for CCP-EM.
-The README.md contains a section on Prerequisites. This section lists the required files to build the container. The license must be accepted by the end user to obtain them.
+The [README.md](CCP_EM/README.md) contains a section on Prerequisites. This section lists the required files to build the container. The license must be accepted by the end user to obtain them.
 
 Prerequisite files should not be committed to this repository.
 
@@ -57,6 +62,28 @@ To prevent Singularity Hub from attempting to build the container, we simply use
    applicationName_version-cuda-cudaVersion.def
 
 ```
+
+## Ubuntu Base Images
+The folder 'ubuntu-base-image' contains recipes for pre built base containers. These can be used as a starting point to aid/speed up the development of your container recipe.
+
+The current versions are built using Ubuntu 18.04 LTS, plus Cuda 9 or Cuda 10.1 if required.
+
+These are available on Singularity Hub.
+
+For example: from the Graphviz Singularity.graphviz-2.40.1 recipe
+
+```
+Bootstrap: shub
+From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804
+```
+
+These two lines, will tell Singularity to use the 'shub' bootstrap to obtain the '1804' ubuntu-base-image container from Singularity Hub.
+
+From here you just need to add the requirements to build a container for your required piece of software. Please see [Singularity.graphviz-2.40.1](graphviz/Singularity.graphviz-2.40.1)
+for the full recipe.
+
+The current ubuntu-base-images include Python, VirtualGL and TurboVNC plus Cuda if indicated in the name.
+
 
 
 ## Running GUI applications on a non-GPU node

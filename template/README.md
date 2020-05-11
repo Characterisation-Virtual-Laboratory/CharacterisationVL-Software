@@ -3,7 +3,7 @@ This document explains the contents of this folder.
 
 * For each new piece of software installed to the CVL, copy the README-TEMPLATE.md file to the folder, rename it to 'README.md' and complete the details.
 
-* The next step is to create and test the singularity recipe for your software.
+* The next step is to create and test the Singularity recipe for your software.
 
 * Lastly, the menu items need to be created.
   The 'xdg' folder contains the required template files.
