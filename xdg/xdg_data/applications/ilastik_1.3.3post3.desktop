@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.3.3post3
+Name=Ilastik 1.3.3post3
+Comment=The interactive learning and segmentation toolkit
+Icon=ilastik.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg ilastik 1.3.3post3 "run_ilastik.sh"
+Path=
+Terminal=
+Categories=X-CVL-ILASTIK
