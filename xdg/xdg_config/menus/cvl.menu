@@ -27,7 +27,7 @@
         <MergeFile type="parent">../applications-merged/application/cytoscape.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/darknet.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/digitalmicrograph-free.menu</MergeFile>
-	<MergeFile type="parent">../applications-merged/application/dke.menu</MergeFile>
+	    <MergeFile type="parent">../applications-merged/application/dke.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/dragondisk.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/drishti.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/dtsa2.menu</MergeFile>
@@ -36,6 +36,7 @@
         <MergeFile type="parent">../applications-merged/application/gimp.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/git-annex.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/graphviz.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/ilastik.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/imagej.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/imagemagick.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/imblproc.menu</MergeFile>
@@ -47,7 +48,7 @@
         <MergeFile type="parent">../applications-merged/application/matlab.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/meshlab.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/omero.menu</MergeFile>
-	<MergeFile type="parent">../applications-merged/application/mib.menu</MergeFile>
+	    <MergeFile type="parent">../applications-merged/application/mib.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/mrtrix.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/nanconvert.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/octave.menu</MergeFile>
