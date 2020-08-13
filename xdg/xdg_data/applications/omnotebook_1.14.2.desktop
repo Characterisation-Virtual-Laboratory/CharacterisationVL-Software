@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=1.14.2
+Name=OMNotebook 1.14.2
+Comment=An open-source software tool for an electronic notebook supporting Modelica.
+Icon=OMNotebook_icon.svg
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg openmodelica "singularity exec openmodelica.img OMNotebook $*"
+Path=
+Terminal=false
+Categories=X-CVL-OPENMODELICA
+##Needs to match "Category" specified in xdg_config/applications-merged/application/applicationName.menu file
