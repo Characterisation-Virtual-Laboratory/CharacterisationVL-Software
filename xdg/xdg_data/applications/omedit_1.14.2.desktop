@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=1.14.2
+Name=OMEdit 1.14.2
+Comment=A Modelica connection editor
+Icon=omedit.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg openmodelica "singularity exec openmodelica.img OMEdit $*"
+Path=
+Terminal=false
+Categories=X-CVL-OPENMODELICA
+##Needs to match "Category" specified in xdg_config/applications-merged/application/applicationName.menu file

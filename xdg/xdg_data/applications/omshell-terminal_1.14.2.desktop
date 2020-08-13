@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=1.14.2
+Name=OMShell-terminal 1.14.2
+Comment=A complete Modelica modeling, compilation and simulation environment based on free software.
+Icon=omshell-terminal-large.svg
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg openmodelica "singularity exec openmodelica.img OMShell-terminal $*"
+Path=
+Terminal=true
+Categories=X-CVL-OPENMODELICA
+##Needs to match "Category" specified in xdg_config/applications-merged/application/applicationName.menu file
