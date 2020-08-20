@@ -9,6 +9,7 @@ To add software to the repository you will need to create a new branch. The new 
 1. Create a branch
 ```
 $ git branch <software name>
+$ git checkout <software name>
 ```
 2. Make a subdirectory
 3. Add all the necessary files
