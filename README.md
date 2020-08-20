@@ -6,7 +6,7 @@ Each software package is located in its own folder. The files are tagged with th
 To add software to the repository you will need to create a new branch. The new branch will be checked and merged.
 
 ## Steps to add a software package
-1. Create a branch
+1. Create a branch (For an overview of the workflow see:https://youtu.be/S2TUommS3O0)
 ```
 $ git branch <software name>
 $ git checkout <software name>
