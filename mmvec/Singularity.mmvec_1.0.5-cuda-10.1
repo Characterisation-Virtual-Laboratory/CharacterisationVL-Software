@@ -22,8 +22,12 @@ From: Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-cuda1
     conda update -y conda
     wget https://data.qiime2.org/distro/core/qiime2-2020.6-py36-linux-conda.yml
     conda env create -n qiime2-2020.6 --file qiime2-2020.6-py36-linux-conda.yml
-    bash -c 'conda init bash'
-    bash -c '. /opt/conda/etc/profile.d/conda.sh;conda activate /opt/conda/envs/qiime2-2020.6;pip install numpy;pip install tensorflow-gpu<=1.14.0;pip install git+https://github.com/biocore/mmvec.git;qiime dev refresh-cache'
+    /bin/bash
+    source activate /opt/conda/envs/qiime2-2020.6
+    pip install numpy
+    pip install git+https://github.com/biocore/mmvec.git
+    pip install tensorflow-gpu<=1.14.0
+    qiime dev refresh-cache
 
 %runscript
     exec qiime "$@"
