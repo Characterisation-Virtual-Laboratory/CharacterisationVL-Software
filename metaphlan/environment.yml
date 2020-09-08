@@ -1,0 +1,18 @@
+name: metaphlan
+dependencies:
+    - python >=3.7
+    - biopython >=1.73
+    - dendropy >=4.4.0
+    - matplotlib-base >=3.1.0
+    - numpy >=1.15.4
+    - pandas >=0.24.2
+    - seaborn >=0.9.0
+    - blast >=2.6.0
+    - diamond >=0.9
+    - trimal >=1.4.1
+    - muscle >=3.8.1551
+    - mafft >=7.310
+    - fasttree >=2.1.8
+    - raxml >=8.2.10
+    - iqtree >=1.6.6
+    - mash
