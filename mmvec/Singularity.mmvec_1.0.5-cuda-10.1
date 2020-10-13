@@ -5,13 +5,13 @@ From: Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-cuda1
     PATH=/opt/conda/bin:$PATH
     export PATH
     source activate /opt/conda/envs/qiime2-2020.6
-    export LC_ALL=C.UTF-8
-    export LANG=C.UTF-8
+    export LC_ALL=en_US.utf-8
+    export LANG=en_US.utf-8
 
 
 %post
-    export LC_ALL=C.UTF-8
-    export LANG=C.UTF-8
+    export LC_ALL=en_US.utf-8
+    export LANG=en_US.utf-8
     apt update -y
     apt  install -y build-essential
     apt install -y git curl vim wget tar bzip2 gzip 
