@@ -47,12 +47,13 @@
         <MergeFile type="parent">../applications-merged/application/mantid.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/matlab.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/meshlab.menu</MergeFile>
-        <MergeFile type="parent">../applications-merged/application/omero.menu</MergeFile>
-	    <MergeFile type="parent">../applications-merged/application/mib.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/mib.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/mrtrix.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/mydata.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/nanconvert.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/octave.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/octopus.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/omero.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/openrefine.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/paraview.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/protomo.menu</MergeFile>
