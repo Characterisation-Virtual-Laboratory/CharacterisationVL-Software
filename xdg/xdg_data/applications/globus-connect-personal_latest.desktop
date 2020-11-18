@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=Latest
+Name=Globus Connect Personal
+Comment=Globus Personal Endpoint
+Icon=globus.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg globus-connect-personal latest "globusconnectpersonal"
+Path=
+Terminal=
+Categories=X-CVL-GLOBUS-CONNECT-PERSONAL
