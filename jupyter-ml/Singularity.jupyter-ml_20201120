@@ -41,10 +41,6 @@ curl https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/c
 cd /usr/local
 tar zxf /tmp/cudnn.tgz
 
-
-mkdir -p /opt/
-python3 -m venv /opt/jupyter
-. /opt/jupyter/bin/activate
 pip3 install --upgrade pip
 pip3 install jupyterlab
 pip3 install pandas
