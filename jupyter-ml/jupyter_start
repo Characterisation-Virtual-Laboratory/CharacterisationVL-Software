@@ -1,3 +1,2 @@
 #!/bin/bash 
-source /opt/jupyter/bin/activate
 jupyter lab --no-browser --NotebookApp.notebook_dir=/home/$USER --ContentsManager.allow_hidden=True
