@@ -145,16 +145,17 @@ OSVersion:  focal
     export CPLUS_INCLUDE_PATH=/usr/local/hdf5/include:$CPLUS_INCLUDE_PATH
     export LIBRARY_PATH=/usr/local/hdf5/lib:$LIBRARY_PATH
     export LD_LIBRARY_PATH=/usr/local/hdf5/lib:$LD_LIBRARY_PATH
+    pip install h5py
 
     echo "*********************************************************"
     echo "Installing Prismatic"
     echo "*********************************************************"
     cd /tmp
-    git clone https://github.com/prism-em/prismatic.git && cd prismatic
+    git clone https://github.com/prism-em/prismatic.git && cd prismatic && git checkout 1.2.1
     mkdir build && cd build
-    sed -i 's/sm_30/sm_35/g' ../CMakeLists.txt
+    sed -i 's/sm_30/sm_50/g' ../CMakeLists.txt
     cmake -DCMAKE_PREFIX_PATH=/usr/local/prismatic -DHDF5_ROOT=/usr/local/hdf5/ -DPRISMATIC_ENABLE_CLI=1 -DPRISMATIC_ENABLE_GPU=1 -DPRISMATIC_ENABLE_PYPRISMATIC=1 -DPRISMATIC_ENABLE_GUI=1 -DPRISMATIC_ENABLE_DOUBLE_PRECISION=0 ..
-    make -j
+    make
     make install
 
     echo "*********************************************************"
