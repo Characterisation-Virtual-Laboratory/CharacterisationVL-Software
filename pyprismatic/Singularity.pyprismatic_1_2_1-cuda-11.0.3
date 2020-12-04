@@ -6,7 +6,7 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:anaco
     MAINTAINER_EMAIL luhan.cheng@monash.edu
 
     APPLICATION_NAME pyprismatic
-    APPLICATION_VERSION 1.2.1
+    APPLICATION_VERSION c0f23b5dc84e3f86d376836155b64101bd9abecd
 
     HARDWARE gpu
 
@@ -18,6 +18,18 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:anaco
 
 %post
 
+    echo "*********************************************************"
+    echo "Installing Boost"
+    echo "*********************************************************"
+    apt install -y libboost-all-dev
+
+
+    echo "*********************************************************"
+    echo "Installing Qt5"
+    echo "*********************************************************"
+    apt install -y qt5-default
+
+    
     echo "*********************************************************"
     echo "Installing fftw"
     echo "*********************************************************"
@@ -54,18 +66,22 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:anaco
     ./configure --enable-threadsafe --enable-cxx --enable-unsupported --prefix=/usr/local/hdf5/
     make
     make install
+    export HDF5_ROOT=/usr/local/hdf5/
     export CPLUS_INCLUDE_PATH=/usr/local/hdf5/include:$CPLUS_INCLUDE_PATH
     export LIBRARY_PATH=/usr/local/hdf5/lib:$LIBRARY_PATH
     export LD_LIBRARY_PATH=/usr/local/hdf5/lib:$LD_LIBRARY_PATH
-    /opt/conda/bin/conda install h5py
+    /opt/conda/bin/conda install h5py matplotlib
+
+
 
     echo "*********************************************************"
     echo "Installing Prismatic"
     echo "*********************************************************"
     PRISM_SRC=/usr/local/src/prismatic
     mkdir -p $PRISM_SRC
-    git clone --branch 1.2.1 https://github.com/prism-em/prismatic.git $PRISM_SRC
+    git clone  https://github.com/prism-em/prismatic.git $PRISM_SRC
     cd $PRISM_SRC
+    git checkout c0f23b5dc84e3f86d376836155b64101bd9abecd
     mkdir build && cd build
     sed -i 's/sm_30/sm_50/g' $PRISM_SRC/CMakeLists.txt
     cmake -DCMAKE_PREFIX_PATH=/usr/local/prismatic -DHDF5_ROOT=/usr/local/hdf5/ -DPRISMATIC_ENABLE_CLI=1 -DPRISMATIC_ENABLE_GPU=1 -DPRISMATIC_ENABLE_PYPRISMATIC=1 -DPRISMATIC_ENABLE_GUI=1 -DPRISMATIC_ENABLE_DOUBLE_PRECISION=0 ..
@@ -75,8 +91,8 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:anaco
     echo "*********************************************************"
     echo "Installing PyPrismatic"
     echo "*********************************************************"
-    cd ..
-    python3 setpy.py install --enable-gpu
+    cd $PRISM_SRC
+    python3 setup.py install --enable-gpu
 
 
 
