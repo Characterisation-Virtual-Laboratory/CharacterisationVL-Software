@@ -1,6 +1,5 @@
-Bootstrap: debootstrap
-MirrorURL: http://us.archive.ubuntu.com/ubuntu/
-OSVersion:  focal
+Bootstrap: docker
+From:      ubuntu:20.04
 
 %labels
     MAINTAINER_NAME  Lance Wilson
@@ -28,6 +27,7 @@ OSVersion:  focal
     echo "*********************************************************"
     echo "Install repositories"
     echo "*********************************************************"
+    apt update
     apt-get install -y software-properties-common
     apt-add-repository -y 'deb http://us.archive.ubuntu.com/ubuntu/ focal main restricted'
     apt-add-repository -y 'deb http://us.archive.ubuntu.com/ubuntu/ focal-updates main restricted'
