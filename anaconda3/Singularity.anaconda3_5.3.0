@@ -1,15 +1,15 @@
 Bootstrap: shub
-From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004-cuda11.0
+From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004
 
 
 %labels
     MAINTAINER_NAME  Luhan Cheng
     MAINTAINER_EMAIL luhan.cheng@monash.edu
 
-    APPLICATION_NAME ubuntu + cuda + anaconda3
+    APPLICATION_NAME ubuntu + anaconda3
     APPLICATION_VERSION 5.3.0
 
-    HARDWARE gpu
+    HARDWARE cpu
 
 %environment
     export PATH=/opt/conda/bin:$PATH
