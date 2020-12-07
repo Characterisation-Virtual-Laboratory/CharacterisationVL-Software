@@ -50,6 +50,8 @@ pip3 install jupyter-bokeh
 pip3 install scipy
 pip3 install tensorflow-gpu
 pip3 install modin[ray]
+pip3 install tqdm
+pip3 install matplotlib
 jupyter labextension install @jupyter-widgets/jupyterlab-manager
 jupyter labextension install @bokeh/jupyter_bokeh
 pip3 install torch==1.7.0+cu101 torchvision==0.8.1+cu101 torchaudio==0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
