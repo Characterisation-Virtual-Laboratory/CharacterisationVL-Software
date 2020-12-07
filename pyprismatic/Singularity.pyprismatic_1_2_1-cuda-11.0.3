@@ -20,7 +20,7 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004-
 %post
     
     HDF5_ROOT=/usr/local/hdf5/
-    FFTW_ROOT=/usr/loacl/fftw
+    FFTW_ROOT=/usr/local/fftw
     export CPLUS_INCLUDE_PATH=$FFTW_ROOT/include:$HDF5_ROOT/include:$CPLUS_INCLUDE_PATH
     export LIBRARY_PATH=$FFTW_ROOT/lib:$HDF5_ROOT/lib:$LIBRARY_PATH
     export LD_LIBRARY_PATH=$HDF5_ROOT/lib:$FFTW_ROOT/lib:$LD_LIBRARY_PATH
@@ -56,7 +56,7 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004-
     && echo "${FFTW_MD5}  fftw.tar.gz" > fftw.tar.gz.md5 \
     && md5sum -c fftw.tar.gz.md5 \
     && tar -xzvf fftw.tar.gz && cd fftw-${FFTW_VERSION} \
-    && ./configure --enable-threads  --enable-float --enable-sse2 --enable-avx --enable-avx2 --enable-avx512 --disable-static --enable-shared ---prefix $FFTW_ROOT \
+    && ./configure --enable-threads  --enable-float --enable-sse2 --enable-avx --enable-avx2 --enable-avx512 --disable-static --enable-shared --prefix $FFTW_ROOT \
     && make \
     && make install \
     && rm -rf fftw.tar.gz fftw.tar.gz.md5 fftw-${FFTW_VERSION}
@@ -93,7 +93,7 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004-
     mkdir build && cd build
     sed -i 's/-arch=sm_30/-gencode arch=compute_72,code=sm_72/g' $PRISM_SRC/CMakeLists.txt
     sed -i -e '35d;53d'  $PRISM_SRC/src/utility.cu 
-    cmake -DCMAKE_PREFIX_PATH=/usr/local/prismatic -DHDF5_ROOT=$HDF5_ROOT -DFFTW_ROOT=$FFTW_ROOT -DPRISMATIC_ENABLE_CLI=1 -DPRISMATIC_ENABLE_GPU=1 -DPRISMATIC_ENABLE_PYPRISMATIC=1 -DPRISMATIC_ENABLE_GUI=1 -DPRISMATIC_ENABLE_DOUBLE_PRECISION=0 ..
+    cmake -DCMAKE_PREFIX_PATH=/usr/local/prismatic -DHDF5_ROOT=$HDF5_ROOT -DFFTW_INCLUDE_DIR=$FFTW_ROOT/include -DPRISMATIC_ENABLE_CLI=1 -DPRISMATIC_ENABLE_GPU=1 -DPRISMATIC_ENABLE_PYPRISMATIC=1 -DPRISMATIC_ENABLE_GUI=1 -DPRISMATIC_ENABLE_DOUBLE_PRECISION=0 ..
     make
     make install
 
