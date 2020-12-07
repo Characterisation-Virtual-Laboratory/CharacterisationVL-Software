@@ -1,5 +1,5 @@
 Bootstrap: shub
-From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:anaconda3_5.3.0-cuda-11.0.3 
+From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004-cuda11.0
 
 %labels
     MAINTAINER_NAME  Luhan Cheng
@@ -17,6 +17,11 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:anaco
     export LD_LIBRARY_PATH=/usr/local/hdf5/lib:$LD_LIBRARY_PATH
 
 %post
+    
+    echo "*********************************************************"
+    echo "Installing Boost"
+    echo "*********************************************************"
+    apt install -y python3.8 python3-pip
 
     echo "*********************************************************"
     echo "Installing Boost"
@@ -70,8 +75,6 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:anaco
     export CPLUS_INCLUDE_PATH=/usr/local/hdf5/include:$CPLUS_INCLUDE_PATH
     export LIBRARY_PATH=/usr/local/hdf5/lib:$LIBRARY_PATH
     export LD_LIBRARY_PATH=/usr/local/hdf5/lib:$LD_LIBRARY_PATH
-    /opt/conda/bin/conda install h5py matplotlib
-
 
 
     echo "*********************************************************"
@@ -83,7 +86,8 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:anaco
     cd $PRISM_SRC
     git checkout c0f23b5dc84e3f86d376836155b64101bd9abecd
     mkdir build && cd build
-    sed -i 's/sm_30/sm_50/g' $PRISM_SRC/CMakeLists.txt
+    sed -i 's/-arch=sm_30/-gencode arch=compute_72,code=sm_72/g' $PRISM_SRC/CMakeLists.txt
+    sed -i -e '35d;53d'  $PRISM_SRC/src/utility.cu 
     cmake -DCMAKE_PREFIX_PATH=/usr/local/prismatic -DHDF5_ROOT=/usr/local/hdf5/ -DPRISMATIC_ENABLE_CLI=1 -DPRISMATIC_ENABLE_GPU=1 -DPRISMATIC_ENABLE_PYPRISMATIC=1 -DPRISMATIC_ENABLE_GUI=1 -DPRISMATIC_ENABLE_DOUBLE_PRECISION=0 ..
     make
     make install
