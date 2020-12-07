@@ -12,12 +12,22 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004-
 
 %environment
     export HDF5_ROOT=/usr/local/hdf5/
-    export CPLUS_INCLUDE_PATH=/usr/local/hdf5/include:$CPLUS_INCLUDE_PATH
-    export LIBRARY_PATH=/usr/local/hdf5/lib:$LIBRARY_PATH
-    export LD_LIBRARY_PATH=/usr/local/hdf5/lib:$LD_LIBRARY_PATH
+    export FFTW_ROOT=/usr/local/fftw
+    export CPLUS_INCLUDE_PATH=$FFTW_ROOT/include:$HDF5_ROOT/include:$CPLUS_INCLUDE_PATH
+    export LIBRARY_PATH=$FFTW_ROOT/lib:$HDF5_ROOT/lib:$LIBRARY_PATH
+    export LD_LIBRARY_PATH=$HDF5_ROOT/lib:$FFTW_ROOT/lib:$LD_LIBRARY_PATH
 
 %post
     
+    HDF5_ROOT=/usr/local/hdf5/
+    FFTW_ROOT=/usr/loacl/fftw
+    export CPLUS_INCLUDE_PATH=$FFTW_ROOT/include:$HDF5_ROOT/include:$CPLUS_INCLUDE_PATH
+    export LIBRARY_PATH=$FFTW_ROOT/lib:$HDF5_ROOT/lib:$LIBRARY_PATH
+    export LD_LIBRARY_PATH=$HDF5_ROOT/lib:$FFTW_ROOT/lib:$LD_LIBRARY_PATH
+
+    mkdir -p $HDF5_ROOT
+    mkdir -p $FFTW_ROOT
+
     echo "*********************************************************"
     echo "Installing Boost"
     echo "*********************************************************"
@@ -42,7 +52,6 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004-
     FFTW_VERSION=3.3.8
     FFTW_MD5=8aac833c943d8e90d51b697b27d4384d
 
-    FFTW_ROOT=/usr/loacl/fftw
     curl -o fftw.tar.gz http://www.fftw.org/fftw-${FFTW_VERSION}.tar.gz \
     && echo "${FFTW_MD5}  fftw.tar.gz" > fftw.tar.gz.md5 \
     && md5sum -c fftw.tar.gz.md5 \
@@ -68,13 +77,9 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004-
     tar -xvf ${HDF5_MINOR_REL}.tar --directory /usr/local/src
     rm ${HDF5_MINOR_REL}.tar
     cd /usr/local/src/${HDF5_MINOR_REL}
-    ./configure --enable-threadsafe --enable-cxx --enable-unsupported --prefix=/usr/local/hdf5/
+    ./configure --enable-threadsafe --enable-cxx --enable-unsupported --prefix=$HDF5_ROOT
     make
     make install
-    export HDF5_ROOT=/usr/local/hdf5/
-    export CPLUS_INCLUDE_PATH=/usr/local/hdf5/include:$CPLUS_INCLUDE_PATH
-    export LIBRARY_PATH=/usr/local/hdf5/lib:$LIBRARY_PATH
-    export LD_LIBRARY_PATH=/usr/local/hdf5/lib:$LD_LIBRARY_PATH
 
 
     echo "*********************************************************"
@@ -88,7 +93,7 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004-
     mkdir build && cd build
     sed -i 's/-arch=sm_30/-gencode arch=compute_72,code=sm_72/g' $PRISM_SRC/CMakeLists.txt
     sed -i -e '35d;53d'  $PRISM_SRC/src/utility.cu 
-    cmake -DCMAKE_PREFIX_PATH=/usr/local/prismatic -DHDF5_ROOT=/usr/local/hdf5/ -DFFTW_ROOT=$FFTW_ROOT -DPRISMATIC_ENABLE_CLI=1 -DPRISMATIC_ENABLE_GPU=1 -DPRISMATIC_ENABLE_PYPRISMATIC=1 -DPRISMATIC_ENABLE_GUI=1 -DPRISMATIC_ENABLE_DOUBLE_PRECISION=0 ..
+    cmake -DCMAKE_PREFIX_PATH=/usr/local/prismatic -DHDF5_ROOT=$HDF5_ROOT -DFFTW_ROOT=$FFTW_ROOT -DPRISMATIC_ENABLE_CLI=1 -DPRISMATIC_ENABLE_GPU=1 -DPRISMATIC_ENABLE_PYPRISMATIC=1 -DPRISMATIC_ENABLE_GUI=1 -DPRISMATIC_ENABLE_DOUBLE_PRECISION=0 ..
     make
     make install
 
