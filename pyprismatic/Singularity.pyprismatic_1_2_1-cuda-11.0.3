@@ -42,12 +42,12 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004-
     FFTW_VERSION=3.3.8
     FFTW_MD5=8aac833c943d8e90d51b697b27d4384d
 
-
+    FFTW_ROOT=/usr/loacl/fftw
     curl -o fftw.tar.gz http://www.fftw.org/fftw-${FFTW_VERSION}.tar.gz \
     && echo "${FFTW_MD5}  fftw.tar.gz" > fftw.tar.gz.md5 \
     && md5sum -c fftw.tar.gz.md5 \
     && tar -xzvf fftw.tar.gz && cd fftw-${FFTW_VERSION} \
-    && ./configure --enable-threads  --enable-float --enable-sse2 --enable-avx --enable-avx2 --enable-avx512 --disable-static --enable-shared \
+    && ./configure --enable-threads  --enable-float --enable-sse2 --enable-avx --enable-avx2 --enable-avx512 --disable-static --enable-shared ---prefix $FFTW_ROOT \
     && make \
     && make install \
     && rm -rf fftw.tar.gz fftw.tar.gz.md5 fftw-${FFTW_VERSION}
@@ -88,7 +88,7 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004-
     mkdir build && cd build
     sed -i 's/-arch=sm_30/-gencode arch=compute_72,code=sm_72/g' $PRISM_SRC/CMakeLists.txt
     sed -i -e '35d;53d'  $PRISM_SRC/src/utility.cu 
-    cmake -DCMAKE_PREFIX_PATH=/usr/local/prismatic -DHDF5_ROOT=/usr/local/hdf5/ -DPRISMATIC_ENABLE_CLI=1 -DPRISMATIC_ENABLE_GPU=1 -DPRISMATIC_ENABLE_PYPRISMATIC=1 -DPRISMATIC_ENABLE_GUI=1 -DPRISMATIC_ENABLE_DOUBLE_PRECISION=0 ..
+    cmake -DCMAKE_PREFIX_PATH=/usr/local/prismatic -DHDF5_ROOT=/usr/local/hdf5/ -DFFTW_ROOT=$FFTW_ROOT -DPRISMATIC_ENABLE_CLI=1 -DPRISMATIC_ENABLE_GPU=1 -DPRISMATIC_ENABLE_PYPRISMATIC=1 -DPRISMATIC_ENABLE_GUI=1 -DPRISMATIC_ENABLE_DOUBLE_PRECISION=0 ..
     make
     make install
 
