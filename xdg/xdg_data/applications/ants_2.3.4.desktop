@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=2.3.4
+Name=ANTs 2.3.4
+Comment=Advanced Normalization Tools
+Icon=gnome-terminal.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg ants 2.3.4 "/bin/bash"
+Path=
+Terminal=
+Categories=X-CVL-ANTS
