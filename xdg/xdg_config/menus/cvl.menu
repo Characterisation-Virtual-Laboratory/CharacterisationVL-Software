@@ -8,6 +8,7 @@
         <MergeFile type="parent">../applications-merged/application/3dslicer.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/apex.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/amide.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/ants.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/argos.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/ariba.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/atom.menu</MergeFile>
