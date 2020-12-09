@@ -16,7 +16,7 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004-
     export CPLUS_INCLUDE_PATH=$FFTW_ROOT/include:$HDF5_ROOT/include:$CPLUS_INCLUDE_PATH
     export LIBRARY_PATH=$FFTW_ROOT/lib:$HDF5_ROOT/lib:$LIBRARY_PATH
     export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:$HDF5_ROOT/lib:$FFTW_ROOT/lib:$LD_LIBRARY_PATH
-    export PATH=$FFTW_ROOT/bin:$HDF5_ROOT/bin:$PATH
+    export PATH=/usr/local/prismatic/bin:$FFTW_ROOT/bin:$HDF5_ROOT/bin:$PATH
 
 
 %post
@@ -34,9 +34,10 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004-
     mkdir -p $FFTW_ROOT
 
     echo "*********************************************************"
-    echo "Installing Boost"
+    echo "Installing Python"
     echo "*********************************************************"
     apt install -y python3.8 python3-pip
+    python3 -m pip install numpy matplotlib
 
     echo "*********************************************************"
     echo "Installing Boost"
@@ -47,7 +48,7 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004-
     echo "*********************************************************"
     echo "Installing Qt5"
     echo "*********************************************************"
-    apt install -y qt5-default
+    apt install -y qt5-default qt5ct libqt5gui5
 
     
     echo "*********************************************************"
@@ -87,6 +88,7 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004-
     ./configure --enable-threadsafe --enable-cxx --enable-unsupported --prefix=$HDF5_ROOT
     make
     make install
+    python3 -m pip install h5py
 
 
     echo "*********************************************************"
@@ -102,16 +104,19 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004-
     sed -i -e '35d;53d'  $PRISM_SRC/src/utility.cu 
 
     cd $PRISM_SRC
-    python3 setup.py build_ext install --enable-gpu -DCMAKE_PREFIX_PATH=/usr/local/prismatic -DHDF5_ROOT=$HDF5_ROOT -DFFTW_INCLUDE_DIR=$FFTW_INCLUDE_DIR -DPRISMATIC_ENABLE_CLI=1 -DPRISMATIC_ENABLE_GPU=1 -DPRISMATIC_ENABLE_PYPRISMATIC=1 -DPRISMATIC_ENABLE_GUI=1 -DPRISMATIC_ENABLE_DOUBLE_PRECISION=0
+    python3 setup.py build_ext install --enable-gpu -DCMAKE_INSTALL_PREFIX=/usr/local/prismatic -DHDF5_ROOT=$HDF5_ROOT -DFFTW_INCLUDE_DIR=$FFTW_INCLUDE_DIR -DPRISMATIC_ENABLE_CLI=1 -DPRISMATIC_ENABLE_GPU=1 -DPRISMATIC_ENABLE_PYPRISMATIC=1 -DPRISMATIC_ENABLE_GUI=1 -DPRISMATIC_ENABLE_DOUBLE_PRECISION=0 
+    cmake --install ./build/temp.linux-x86_64-3.8
+    cd
+
+
     rm -rf $PRISM_SRC /usr/local/src/hdf5 /usr/local/src/fftw
+
 
 
     echo "*********************************************************"
     echo "Fixing qt5, see https://superuser.com/questions/1347723/arch-on-wsl-libqt5core-so-5-not-found-despite-being-installed"
     echo "*********************************************************"
-    if [ -x usr/lib/x86_64-linux-gnu/libQt5Core.so.5 ]; then
-        (set -x; strip --remove-section=.note.ABI-tag usr/lib/x86_64-linux-gnu/libQt5Core.so.5)
-    fi
+    strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
 
 
 %runscript
