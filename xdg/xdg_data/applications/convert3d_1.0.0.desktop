@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0.0
+Name=Convert3D 1.0.0
+Comment=Medical image processing tool
+Icon=convert3D_256x256.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg convert3d 1.0.0 "c3d_gui"
+Path=
+Terminal=
+Categories=X-CVL-CONVERT3D
