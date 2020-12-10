@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.4.2
+Name=Human Connectome Workbench 1.4.2
+Comment=
+Icon=workbench_128x128x32.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg connectome-workbench 1.4.2 "wb_view"
+Path=
+Terminal=
+Categories=X-CVL-CONNECTOME
