@@ -1,5 +1,5 @@
-Bootstrap: shub
-From:  Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004
+Bootstrap: localimage
+From:  2004.sif
 
 %labels
     org.label-schema.build-date=$BUILD_DATE 
@@ -35,7 +35,7 @@ From:  Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004
     curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
     apt-get install -y --no-install-recommends \
     nodejs && \
-    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    apt-get clean && rm -rf /var/lib/apt/lists/* /var/tmp/*
 
     # Install latest pandoc
     curl -o pandoc-2.2.2.1-1-amd64.deb -sSL "https://github.com/jgm/pandoc/releases/download/2.2.2.1/pandoc-2.2.2.1-1-amd64.deb" && \
@@ -144,6 +144,7 @@ From:  Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004
     PYTHONNOUSERSITE=1
 
     # Installing precomputed python packages
+    conda install -y conda-build
     conda install -y python=3.7.1 \
     pip=19.1 \
     mkl=2018.0.3 \
@@ -258,5 +259,3 @@ From:  Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004
     export IS_DOCKER_8395080871=1
 %runscript
     $*
-    # cd /tmp/
-    # exec /usr/local/miniconda/bin/fmriprep "$@"
