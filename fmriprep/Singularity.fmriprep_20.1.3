@@ -12,7 +12,7 @@ From:  2004.sif
     org.label-schema.schema-version="1.0"
 %post
     mkdir /src && cd /src
-    git clone --branch 20.1.3 https://github.com/nipreps/fmriprep.git && cd fmriprep
+    git clone --branch $VERSION https://github.com/nipreps/fmriprep.git && cd fmriprep
 
     mv docker/files/neurodebian.gpg /usr/local/etc/neurodebian.gpg
     mv wrapper/setup.cfg fmriprep-setup.cfg
