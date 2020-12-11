@@ -1,0 +1,2 @@
+#!/bin/bash 
+jupyter notebook --no-browser --NotebookApp.notebook_dir=/home/$USER --ContentsManager.allow_hidden=True
