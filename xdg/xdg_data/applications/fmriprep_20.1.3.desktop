@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=20.1.3
+Name=fmriprep 20.1.3
+Comment=Medical image processing tool
+Icon=gnome-terminal.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg fmriprep 20.1.3 "fmriprep"
+Path=
+Terminal=
+Categories=X-CVL-FMRIPREP
