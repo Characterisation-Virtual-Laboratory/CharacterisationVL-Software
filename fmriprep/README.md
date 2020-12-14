@@ -10,10 +10,10 @@
 
 
 * Run:      
-            singularity exec imageFileName.simg fmriprep
+            singularity exec imageFileName.simg -B $HOME:/home/fmriprep fmriprep
 
 * Test:     
-            singularity exec imageFileName.simg fmriprep -h
+            singularity exec imageFileName.simg -B $HOME:/home/fmriprep fmriprep -h
 
 * Examples:
             https://fmriprep.org/en/stable/singularity.html
