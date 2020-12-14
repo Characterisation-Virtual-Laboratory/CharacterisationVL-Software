@@ -1,3 +1,0 @@
-export VERSION=20.1.3
-export BUILD_DATE=2020-12-11
-singularity build ...

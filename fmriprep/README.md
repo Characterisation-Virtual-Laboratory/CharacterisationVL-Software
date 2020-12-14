@@ -3,7 +3,7 @@
 * Website:  
             https://fmriprep.org/en/stable/
 * Source:   
-            https://github.com/nipreps/fmriprep/tree/20.1.3
+            https://github.com/nipreps/fmriprep/tree/20.2.1
 
 * Licence:  
             https://github.com/nipreps/fmriprep/blob/master/LICENSE
