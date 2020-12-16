@@ -98,6 +98,7 @@ From: vnmd/fsl_6.0.3:20200905
 
     python setup.py install --user
 
+    mkdir -p /opt/bru2
     cd /opt/bru2
 
     wget https://github.com/neurolabusc/Bru2Nii/releases/download/v1.0.20180303/Bru2_Linux.zip
@@ -113,6 +114,7 @@ From: vnmd/fsl_6.0.3:20200905
 
     git clone https://github.com/IBT-FMI/mouse-brain-atlases_generator.git
 
+    mkdir -p /opt/mouse-brain-atlases_generator
     cd /opt/mouse-brain-atlases_generator
 
     apt-get update -qq
@@ -143,7 +145,7 @@ From: vnmd/fsl_6.0.3:20200905
     curl -sSL --retry 5 -o /tmp/toinstall.deb http://snapshot.debian.org/archive/debian-security/20160113T213056Z/pool/updates/main/libp/libpng/libpng12-0_1.2.49-1%2Bdeb7u2_amd64.deb
     dpkg -i /tmp/toinstall.deb
     rm /tmp/toinstall.deb
-    apt-get install -f
+    apt-get install -f -y
     apt-get clean
     rm -rf /var/lib/apt/lists/*
     gsl2_path="$(find / -name 'libgsl.so.19' || printf '')"
