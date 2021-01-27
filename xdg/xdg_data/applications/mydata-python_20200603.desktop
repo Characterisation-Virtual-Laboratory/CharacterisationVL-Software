@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=20200603
+Name=MyData Python 20200603
+Comment=MyData command line tool
+Icon=gnome-terminal.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg mydata-python 20200603 "mydata"
+Path=
+Terminal=
+Categories=X-CVL-MYDATA-PYTHON
