@@ -4,19 +4,19 @@ from hpccm.primitives import baseimage, copy, environment, label, runscript, she
 ## Prerequisite:
 #  - HPCCM - https://github.com/NVIDIA/hpc-container-maker
 #  - Singularity >= v 3.2 to support the staged build.
-#  - MotionCor2_1.2.6.zip - https://msg.ucsf.edu/software
+#  - MotionCor2_1.4.0.zip - https://msg.ucsf.edu/software
+#  - Gctf_v1.06_and_examples.tar.gz - https://www2.mrc-lmb.cam.ac.uk/research/locally-developed-software/zhang-software/
+#  - ctffind-4.1.14-linux64.tar.gz  - https://www2.mrc-lmb.cam.ac.uk/research/locally-developed-software/zhang-software/
 ##
-# hpccm --recipe relion_3.0.7_staged.py
+# hpccm --recipe relion_3.1.0_staged.py
 #        --format singularity
-#        --singularity-version 3.2 > recipe.def
+#        --singularity-version 3.5 > recipe.def
 
-
-# Start "base recipe, known as '18.04_cuda9'"
+# Start "base recipe, known as '18.04_cuda10'"
 # add docstring to Dockerfile
 Stage0 += comment(__doc__.strip(), reformat=False)
 
-#Stage0 = hpccm.Stage()
-Stage0.name = '18.04_cuda9'
+Stage0.name = '18.04_cuda10'
 Stage0 += baseimage(image="ubuntu:18.04", _as=Stage0.name)
 
 # Setting up environment vars for container build and runtime.
@@ -45,6 +45,10 @@ base_packages = apt_get(
         "libxi-dev",
         "libglu1-mesa",
         "libglu1-mesa-dev",
+        "libxft-dev",
+        "libxft2",
+        "libfreetype6",
+        "libfreetype6-dev",
         "python-pip",
         "python-pyqt5",
         "pyqt5-dev",
@@ -74,45 +78,39 @@ Stage0 += shell(
     ]
 )
 
-# Adding in Relion 3.0.7, build from source code.
+# Adding in Relion 3.1.0, build from source code.
 Stage0 += apt_get(ospackages=["libopenmpi-dev", "libopenmpi2", "libfftw3-dev", "libtiff-dev"])
 Stage0 += shell(
     commands=[
         "mkdir -p /opt/buildRelion",
-        "mkdir -p /opt/relion-3.0.7",
+        "mkdir -p /opt/relion-3.1.0",
         "cd /opt/buildRelion",
-        "git clone -b 3.0.7 https://github.com/3dem/relion.git",
+        "git clone -b 3.1.0 https://github.com/3dem/relion.git",
         "cd relion",
         "mkdir build",
         "cd build",
-        "cmake -DCMAKE_INSTALL_PREFIX=/opt/relion-3.0.7 ..",
+        "cmake -DCMAKE_INSTALL_PREFIX=/opt/relion-3.1.0 ..",
         "make -j 1",
         "make install",
     ]
 )
 
 # Adding MotionCor2 - local copy required, licensing prevents redistribution
-Stage0 += copy(src="MotionCor2_1.2.6.zip", dest='/opt/MotionCor2_1.2.6/MotionCor2_1.2.6.zip')
-Stage0 += shell(commands=["cd /opt/MotionCor2_1.2.6/",
-                          "unzip MotionCor2_1.2.6.zip",
-                          "rm MotionCor2_1.2.6.zip"])
+Stage0 += copy(src="MotionCor2_1.4.0.zip", dest='/opt/MotionCor2_1.4.0.zip')
+Stage0 += shell(commands=["cd /opt/",
+                          "unzip MotionCor2_1.4.0.zip",
+                          "rm MotionCor2_1.4.0.zip",
+                          "chmod -R g+rx,o+rx MotionCor2_1.4.0"])
 
-# Adding Gctf
-# Stage0 += copy(src="Gctf_v1.06_and_examples.tar.gz", dest="/opt/Gctf_v1.06_and_examples.tar.gz")
-# Stage0 += shell(commands=["cd /opt",
-#                           "tar -zxvf Gctf_v1.06_and_examples.tar.gz"])
+# Adding Gctf - needs to be downloaded as a pre requisite. The website no longer supports using wget.
+Stage0 += copy(src="Gctf_v1.06_and_examples.tar.gz", dest="/opt/Gctf_v1.06_and_examples.tar.gz")
 Stage0 += shell(commands=["cd /opt",
-                          "wget http://www.mrc-lmb.cam.ac.uk/kzhang/Gctf/Gctf_v1.06_and_examples.tar.gz",
                           "tar -zxvf Gctf_v1.06_and_examples.tar.gz"])
 
-# Adding ctffind
-# Stage0 += copy(src="ctffind-4.1.13-linux64.tar.gz", dest="/opt/ctffind-4.1.13/ctffind-4.1.13-linux64.tar.gz")
-# Stage0 += shell(commands=["cd /opt/ctffind-4.1.13",
-#                           "tar -zxvf ctffind-4.1.13-linux64.tar.gz"])
-Stage0 += shell(commands=["mkdir -p /opt/ctffind-4.1.13",
-                          "cd /opt/ctffind-4.1.13",
-                          "wget http://grigoriefflab.janelia.org/sites/default/files/ctffind-4.1.13-linux64.tar.gz",
-                          "tar -zxvf ctffind-4.1.13-linux64.tar.gz"])
+# Adding ctffind - needs to be downloaded as a pre requisite. The website no longer supports using wget.
+Stage0 += copy(src="ctffind-4.1.14-linux64.tar.gz", dest="/opt/ctffind-4.1.14/ctffind-4.1.14-linux64.tar.gz")
+Stage0 += shell(commands=["cd /opt/ctffind-4.1.14",
+                          "tar -zxvf ctffind-4.1.14-linux64.tar.gz"])
 
 Stage0 += shell(commands=["mkdir -p /opt/resmap",
                           "cd /opt/resmap",
@@ -135,22 +133,22 @@ Stage1 += environment(
     variables={
         "CUDABINPATH": "/usr/local/cuda-10.1/bin",
         "CUDALIBPATH": "/usr/local/cuda-10.1/lib64/stubs:/usr/local/cuda-10.1/lib64/:/usr/local/cuda-10.1/lib",
-        "MOTIONCOR2BINPATH": "/opt/MotionCor2_1.2.6",
+        "MOTIONCOR2BINPATH": "/opt/MotionCor2_1.4.0",
         "GCTFBINPATH": "/opt/Gctf_v1.06/bin",
-        "CTFFINDBINPATH": "/opt/ctffind-4.1.13/bin",
+        "CTFFINDBINPATH": "/opt/ctffind-4.1.14/bin",
         "RESMAPBINPATH": "/opt/resmap",
         "RELION_QSUB_EXTRA_COUNT": "2",
         "RELION_QSUB_EXTRA2": "time",
         "RELION_QSUB_EXTRA2_DEFAULT": "16:00:00",
         "RELION_QSUB_EXTRA1": "account",
         "RELION_QSUB_EXTRA1_DEFAULT": "account",
-        "RELION_QSUB_TEMPLATE": "/usr/local/relion/3.0.7/scripts/Submit_template_1xNode_2xK80.sh",
-        "RELION_MOTIONCOR2_EXECUTABLE": "/opt/MotionCor2_1.2.6/MotionCor2_1.2.6-Cuda101",
-        "RELION_CTFFIND_EXECUTABLE": "/opt/ctffind-4.1.13/bin/ctffind",
+        "RELION_QSUB_TEMPLATE": "/usr/local/relion/3.1.0/scripts/Submit_template_1xNode_2xK80.sh",
+        "RELION_MOTIONCOR2_EXECUTABLE": "/opt/MotionCor2_1.4.0/MotionCor2_1.4.0_Cuda101",
+        "RELION_CTFFIND_EXECUTABLE": "/opt/ctffind-4.1.14/bin/ctffind",
         "RELION_GCTF_EXECUTABLE": "/opt/Gctf_v1.06/bin/Gctf-v1.06_sm_30_cu8.0_x86_64",
         "RELION_RESMAP_EXECUTABLE": "/opt/resmap/ResMap-1.1.4-linux64",
-        "RELIONBINPATH": "/opt/relion-3.0.7/bin",
-        "RELIONLIBPATH": "/opt/relion-3.0.7/lib:/usr/local/cuda/lib64:/usr/lib/x86_64-linux-gnu/openmpi/lib"
+        "RELIONBINPATH": "/opt/relion-3.1.0/bin",
+        "RELIONLIBPATH": "/opt/relion-3.1.0/lib:/usr/local/cuda/lib64:/usr/lib/x86_64-linux-gnu/openmpi/lib"
     },
     _export=False,
 )
@@ -187,6 +185,8 @@ release_packages = apt_get(
                 "libxmu6",
                 "libxi6",
                 "libglu1-mesa",
+                "libxft2",
+                "libfreetype6",
                 "wget",
                 "ca-certificates",
                 "ssl-cert",
@@ -196,6 +196,15 @@ release_packages = apt_get(
                 "openssh-server"])
 Stage1 += release_packages
 
+
+#Installing virtualGl and TurboVNC
+Stage1 += shell(
+    commands=[
+        "cd /tmp",
+        "wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/turbovnc_2.1.2_amd64.deb",
+        "dpkg -i turbovnc_2.1.2_amd64.deb",
+        "wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/virtualgl_2.6.2_amd64.deb",
+        "dpkg -i virtualgl_2.6.2_amd64.deb"])
 
 # Installing cuda 10.1
 Stage1 += shell(
@@ -207,7 +216,7 @@ Stage1 += shell(
         "dpkg -i cuda-repo-ubuntu1804_10.1.168-1_amd64.deb",
         "apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub",
         "apt-get update",
-        "apt install -y cuda",
+        "apt install -y cuda-10-1",
         "echo '*** Cuda 8 to 10.1 fudge - enables Gctf to run. ***'",
         "cd /usr/local/cuda/lib64/",
         "ln -s libcufft.so.10 libcufft.so.8.0"
@@ -215,16 +224,16 @@ Stage1 += shell(
 
 # Relion
 Stage1 += copy(_from=Stage0.name,
-               src='/opt/relion-3.0.7/bin/',
-               dest='/opt/relion-3.0.7/bin/')
+               src='/opt/relion-3.1.0/bin',
+               dest='/opt/relion-3.1.0/bin')
 Stage1 += copy(_from=Stage0.name,
-               src='/opt/relion-3.0.7/lib/',
-               dest='/opt/relion-3.0.7/lib/')
+               src='/opt/relion-3.1.0/lib',
+               dest='/opt/relion-3.1.0/lib')
 
 # MotionCor2
 Stage1 += copy(_from=Stage0.name,
-               src='/opt/MotionCor2_1.2.6',
-               dest='/opt/MotionCor2_1.2.6')
+               src='/opt/MotionCor2_1.4.0',
+               dest='/opt/MotionCor2_1.4.0')
 
 # Gctf
 Stage1 += copy(_from=Stage0.name,
@@ -233,8 +242,8 @@ Stage1 += copy(_from=Stage0.name,
 
 # ctffind
 Stage1 += copy(_from=Stage0.name,
-               src='/opt/ctffind-4.1.13/bin',
-               dest='/opt/ctffind-4.1.13/bin')
+               src='/opt/ctffind-4.1.14/bin',
+               dest='/opt/ctffind-4.1.14/bin')
 
 # ResMap
 Stage1 += copy(_from=Stage0.name,
