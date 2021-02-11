@@ -74,7 +74,7 @@ Stage0 += shell(
         "dpkg -i cuda-repo-ubuntu1804_10.1.168-1_amd64.deb",
         "apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub",
         "apt-get update",
-        "apt install -y cuda"
+        "apt install -y cuda-10-1"
     ]
 )
 
@@ -143,7 +143,7 @@ Stage1 += environment(
         "RELION_QSUB_EXTRA1": "account",
         "RELION_QSUB_EXTRA1_DEFAULT": "account",
         "RELION_QSUB_TEMPLATE": "/usr/local/relion/3.1.0/scripts/Submit_template_1xNode_2xK80.sh",
-        "RELION_MOTIONCOR2_EXECUTABLE": "/opt/MotionCor2_1.4.0/MotionCor2_1.4.0-Cuda101",
+        "RELION_MOTIONCOR2_EXECUTABLE": "/opt/MotionCor2_1.4.0/MotionCor2_1.4.0_Cuda101",
         "RELION_CTFFIND_EXECUTABLE": "/opt/ctffind-4.1.14/bin/ctffind",
         "RELION_GCTF_EXECUTABLE": "/opt/Gctf_v1.06/bin/Gctf-v1.06_sm_30_cu8.0_x86_64",
         "RELION_RESMAP_EXECUTABLE": "/opt/resmap/ResMap-1.1.4-linux64",
@@ -216,10 +216,10 @@ Stage1 += shell(
         "dpkg -i cuda-repo-ubuntu1804_10.1.168-1_amd64.deb",
         "apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub",
         "apt-get update",
-        "apt install -y cuda",
+        "apt install -y cuda-10-1",
         "echo '*** Cuda 8 to 10.1 fudge - enables Gctf to run. ***'",
         "cd /usr/local/cuda/lib64/",
-        "ln -s libcufft.so.10.1.168 libcufft.so.8.0"
+        "ln -s libcufft.so.10 libcufft.so.8.0"
     ])
 
 # Relion

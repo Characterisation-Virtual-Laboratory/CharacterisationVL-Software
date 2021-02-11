@@ -74,7 +74,7 @@ Stage: 18.04_cuda10
     dpkg -i cuda-repo-ubuntu1804_10.1.168-1_amd64.deb
     apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
     apt-get update
-    apt install -y cuda
+    apt install -y cuda-10-1
 
 %post
     apt-get update -y
@@ -160,7 +160,7 @@ Stage: final
     export RELIONLIBPATH=/opt/relion-3.1.0/lib:/usr/local/cuda/lib64:/usr/lib/x86_64-linux-gnu/openmpi/lib
     export RELION_CTFFIND_EXECUTABLE=/opt/ctffind-4.1.14/bin/ctffind
     export RELION_GCTF_EXECUTABLE=/opt/Gctf_v1.06/bin/Gctf-v1.06_sm_30_cu8.0_x86_64
-    export RELION_MOTIONCOR2_EXECUTABLE=/opt/MotionCor2_1.4.0/MotionCor2_1.4.0-Cuda101
+    export RELION_MOTIONCOR2_EXECUTABLE=/opt/MotionCor2_1.4.0/MotionCor2_1.4.0_Cuda101
     export RELION_QSUB_EXTRA1=account
     export RELION_QSUB_EXTRA1_DEFAULT=account
     export RELION_QSUB_EXTRA2=time
@@ -233,10 +233,10 @@ Stage: final
     dpkg -i cuda-repo-ubuntu1804_10.1.168-1_amd64.deb
     apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
     apt-get update
-    apt install -y cuda
+    apt install -y cuda-10-1
     echo '*** Cuda 8 to 10.1 fudge - enables Gctf to run. ***'
     cd /usr/local/cuda/lib64/
-    ln -s libcufft.so.10.1.168 libcufft.so.8.0
+    ln -s libcufft.so.10 libcufft.so.8.0
 
 %files from 18.04_cuda10
     /opt/relion-3.1.0/bin /opt/relion-3.1.0/bin
