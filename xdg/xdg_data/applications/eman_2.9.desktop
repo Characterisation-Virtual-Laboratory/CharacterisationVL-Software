@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=2.9
+Name=Eman 2.9
+Comment=Scientific image processing with a TEM data focus.
+Icon=EMAN2Icon.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg eman 2.9 "e2projectmanager.py"
+Path=
+Terminal=
+Categories=X-CVL-EMAN
