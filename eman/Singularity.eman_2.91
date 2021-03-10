@@ -2,15 +2,15 @@ Bootstrap: shub
 From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-cuda9
 
 %labels
-    MAINTAINER_NAME  Jay van Schyndel
-    MAINTAINER_EMAIL jay.vanschyndel@monash.edu
+    MAINTAINER_NAME  Luhan Cheng
+    MAINTAINER_EMAIL luhan.cheng@monash.edu
 
     APPLICATION_NAME ubuntu
     APPLICATION_VERSION 18.04
 
     HARDWARE GPU
 
-    LAST_UPDATED 01-MAY-2019
+    LAST_UPDATED 10-MARCH-2020
 
 %files
     #eman2Install.exp /tmp/
@@ -24,7 +24,7 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-
     export CONDA_PYTHON_EXE=/opt/eman/bin/python
     #export CONDA_PROMPT_MODIFIER=(base)
     export CONDA_DEFAULT_ENV=base
- 
+
 %post
     echo "*********************************************************"
     echo "Setup and display environment"
