@@ -10,7 +10,7 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-
 
     HARDWARE GPU
 
-    LAST_UPDATED 10-MARCH-2020
+    LAST_UPDATED 10-MARCH-2021
 
 %files
     #eman2Install.exp /tmp/
