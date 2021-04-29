@@ -4,7 +4,7 @@
 # Singularity 3.2 and later.
 BootStrap: docker
 From: ubuntu:18.04
-Stage: 18.04_cuda9
+Stage: 18.04_cuda10
 %post
     . /.singularity.d/env/10-docker*.sh
 
@@ -28,9 +28,13 @@ Stage: 18.04_cuda9
         freeglut3-dev \
         git \
         gpg-agent \
+        libfreetype6 \
+        libfreetype6-dev \
         libglu1-mesa \
         libglu1-mesa-dev \
         libx11-dev \
+        libxft-dev \
+        libxft2 \
         libxi-dev \
         libxmu-dev \
         locales \
@@ -84,37 +88,41 @@ Stage: 18.04_cuda9
 %post
     cd /
     mkdir -p /opt/buildRelion
-    mkdir -p /opt/relion-3.0.7
+    mkdir -p /opt/relion-3.1.0
     cd /opt/buildRelion
-    git clone -b 3.0.7 https://github.com/3dem/relion.git
+    git clone -b 3.1.0 https://github.com/3dem/relion.git
     cd relion
     mkdir build
     cd build
-    cmake -DCMAKE_INSTALL_PREFIX=/opt/relion-3.0.7 ..
+    cmake -DCMAKE_INSTALL_PREFIX=/opt/relion-3.1.0 ..
     make -j 1
     make install
 
 %files
-    MotionCor2_1.2.6.zip /opt/MotionCor2_1.2.6/MotionCor2_1.2.6.zip
+    MotionCor2_1.4.0.zip /opt/MotionCor2_1.4.0.zip
 
 %post
     cd /
-    cd /opt/MotionCor2_1.2.6/
-    unzip MotionCor2_1.2.6.zip
-    rm MotionCor2_1.2.6.zip
+    cd /opt/
+    unzip MotionCor2_1.4.0.zip
+    rm MotionCor2_1.4.0.zip
+    chmod -R g+rx,o+rx MotionCor2_1.4.0
+
+%files
+    Gctf_v1.06_and_examples.tar.gz /opt/Gctf_v1.06_and_examples.tar.gz
 
 %post
     cd /
     cd /opt
-    wget http://www.mrc-lmb.cam.ac.uk/kzhang/Gctf/Gctf_v1.06_and_examples.tar.gz
     tar -zxvf Gctf_v1.06_and_examples.tar.gz
+
+%files
+    ctffind-4.1.14-linux64.tar.gz /opt/ctffind-4.1.14/ctffind-4.1.14-linux64.tar.gz
 
 %post
     cd /
-    mkdir -p /opt/ctffind-4.1.13
-    cd /opt/ctffind-4.1.13
-    wget http://grigoriefflab.janelia.org/sites/default/files/ctffind-4.1.13-linux64.tar.gz
-    tar -zxvf ctffind-4.1.13-linux64.tar.gz
+    cd /opt/ctffind-4.1.14
+    tar -zxvf ctffind-4.1.14-linux64.tar.gz
 
 %post
     cd /
@@ -143,22 +151,22 @@ Stage: final
     rm -rf /var/lib/apt/lists/*
 
 %environment
-    export CTFFINDBINPATH=/opt/ctffind-4.1.13/bin
+    export CTFFINDBINPATH=/opt/ctffind-4.1.14/bin
     export CUDABINPATH=/usr/local/cuda-10.1/bin
     export CUDALIBPATH=/usr/local/cuda-10.1/lib64/stubs:/usr/local/cuda-10.1/lib64/:/usr/local/cuda-10.1/lib
     export GCTFBINPATH=/opt/Gctf_v1.06/bin
-    export MOTIONCOR2BINPATH=/opt/MotionCor2_1.2.6
-    export RELIONBINPATH=/opt/relion-3.0.7/bin
-    export RELIONLIBPATH=/opt/relion-3.0.7/lib:/usr/local/cuda/lib64:/usr/lib/x86_64-linux-gnu/openmpi/lib
-    export RELION_CTFFIND_EXECUTABLE=/opt/ctffind-4.1.13/bin/ctffind
+    export MOTIONCOR2BINPATH=/opt/MotionCor2_1.4.0
+    export RELIONBINPATH=/opt/relion-3.1.0/bin
+    export RELIONLIBPATH=/opt/relion-3.1.0/lib:/usr/local/cuda/lib64:/usr/lib/x86_64-linux-gnu/openmpi/lib
+    export RELION_CTFFIND_EXECUTABLE=/opt/ctffind-4.1.14/bin/ctffind
     export RELION_GCTF_EXECUTABLE=/opt/Gctf_v1.06/bin/Gctf-v1.06_sm_30_cu8.0_x86_64
-    export RELION_MOTIONCOR2_EXECUTABLE=/opt/MotionCor2_1.2.6/MotionCor2_1.2.6-Cuda101
+    export RELION_MOTIONCOR2_EXECUTABLE=/opt/MotionCor2_1.4.0/MotionCor2_1.4.0_Cuda101
     export RELION_QSUB_EXTRA1=account
     export RELION_QSUB_EXTRA1_DEFAULT=account
     export RELION_QSUB_EXTRA2=time
     export RELION_QSUB_EXTRA2_DEFAULT=16:00:00
     export RELION_QSUB_EXTRA_COUNT=2
-    export RELION_QSUB_TEMPLATE=/usr/local/relion/3.0.7/scripts/Submit_template_1xNode_2xK80.sh
+    export RELION_QSUB_TEMPLATE=/usr/local/relion/3.1.0/scripts/Submit_template_1xNode_2xK80.sh
     export RELION_RESMAP_EXECUTABLE=/opt/resmap/ResMap-1.1.4-linux64
     export RESMAPBINPATH=/opt/resmap
 
@@ -191,9 +199,11 @@ Stage: final
         gpg-agent \
         libfftw3-3 \
         libfltk-gl1.3 \
+        libfreetype6 \
         libglu1-mesa \
         libtiff5 \
         libx11-6 \
+        libxft2 \
         libxi6 \
         libxmu6 \
         locales \
@@ -208,6 +218,14 @@ Stage: final
 
 %post
     cd /
+    cd /tmp
+    wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/turbovnc_2.1.2_amd64.deb
+    dpkg -i turbovnc_2.1.2_amd64.deb
+    wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/virtualgl_2.6.2_amd64.deb
+    dpkg -i virtualgl_2.6.2_amd64.deb
+
+%post
+    cd /
     locale-gen en_AU.UTF-8
     mkdir -p /tmp/cuda10
     cd /tmp/cuda10
@@ -215,27 +233,27 @@ Stage: final
     dpkg -i cuda-repo-ubuntu1804_10.1.168-1_amd64.deb
     apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
     apt-get update
-    apt install -y cuda
+    apt install -y cuda-10-1
     echo '*** Cuda 8 to 10.1 fudge - enables Gctf to run. ***'
     cd /usr/local/cuda/lib64/
     ln -s libcufft.so.10 libcufft.so.8.0
 
-%files from 18.04_cuda9
-    /opt/relion-3.0.7/bin/ /opt/relion-3.0.7/bin/
+%files from 18.04_cuda10
+    /opt/relion-3.1.0/bin /opt/relion-3.1.0/bin
 
-%files from 18.04_cuda9
-    /opt/relion-3.0.7/lib/ /opt/relion-3.0.7/lib/
+%files from 18.04_cuda10
+    /opt/relion-3.1.0/lib /opt/relion-3.1.0/lib
 
-%files from 18.04_cuda9
-    /opt/MotionCor2_1.2.6 /opt/MotionCor2_1.2.6
+%files from 18.04_cuda10
+    /opt/MotionCor2_1.4.0 /opt/MotionCor2_1.4.0
 
-%files from 18.04_cuda9
+%files from 18.04_cuda10
     /opt/Gctf_v1.06/bin /opt/Gctf_v1.06/bin
 
-%files from 18.04_cuda9
-    /opt/ctffind-4.1.13/bin /opt/ctffind-4.1.13/bin
+%files from 18.04_cuda10
+    /opt/ctffind-4.1.14/bin /opt/ctffind-4.1.14/bin
 
-%files from 18.04_cuda9
+%files from 18.04_cuda10
     /opt/resmap /opt/resmap
 
 %runscript

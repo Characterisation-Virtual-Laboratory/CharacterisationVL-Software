@@ -8,8 +8,10 @@
         <MergeFile type="parent">../applications-merged/application/3dslicer.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/apex.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/amide.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/ants.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/argos.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/ariba.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/ashs.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/atom.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/bidscoin.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/bids-validator.menu</MergeFile>
@@ -22,10 +24,12 @@
         <MergeFile type="parent">../applications-merged/application/cistem.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/cloudstor.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/colmap.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/connectome-workbench.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/crisprcas.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/cryolo.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/cytoscape.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/darknet.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/datalad.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/digitalmicrograph-free.menu</MergeFile>
 	<MergeFile type="parent">../applications-merged/application/dke.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/dragondisk.menu</MergeFile>
@@ -35,6 +39,7 @@
         <MergeFile type="parent">../applications-merged/application/fiji.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/gimp.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/git-annex.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/globus-connect-personal.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/graphviz.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/ilastik.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/imagej.menu</MergeFile>
@@ -49,10 +54,14 @@
         <MergeFile type="parent">../applications-merged/application/meshlab.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/omero.menu</MergeFile>
 	<MergeFile type="parent">../applications-merged/application/mib.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/mib.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/mrtrix.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/mydata.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/mydata-python.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/nanconvert.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/octave.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/octopus.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/omero.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/openrefine.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/paraview.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/protomo.menu</MergeFile>
