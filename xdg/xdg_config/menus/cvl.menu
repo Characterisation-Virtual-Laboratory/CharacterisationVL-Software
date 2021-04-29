@@ -27,7 +27,7 @@
         <MergeFile type="parent">../applications-merged/application/cytoscape.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/darknet.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/digitalmicrograph-free.menu</MergeFile>
-	    <MergeFile type="parent">../applications-merged/application/dke.menu</MergeFile>
+	<MergeFile type="parent">../applications-merged/application/dke.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/dragondisk.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/drishti.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/dtsa2.menu</MergeFile>
@@ -48,7 +48,7 @@
         <MergeFile type="parent">../applications-merged/application/matlab.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/meshlab.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/omero.menu</MergeFile>
-	    <MergeFile type="parent">../applications-merged/application/mib.menu</MergeFile>
+	<MergeFile type="parent">../applications-merged/application/mib.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/mrtrix.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/nanconvert.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/octave.menu</MergeFile>
@@ -56,6 +56,7 @@
         <MergeFile type="parent">../applications-merged/application/openrefine.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/paraview.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/protomo.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/R.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/quit.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/relion.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/volview.menu</MergeFile>
