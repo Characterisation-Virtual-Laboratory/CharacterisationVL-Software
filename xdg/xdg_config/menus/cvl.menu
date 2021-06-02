@@ -56,6 +56,7 @@
         <MergeFile type="parent">../applications-merged/application/omero.menu</MergeFile>
 	<MergeFile type="parent">../applications-merged/application/mib.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/mrtrix.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/mrtrix3tissue.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/mydata.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/mydata-python.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/nanconvert.menu</MergeFile>
