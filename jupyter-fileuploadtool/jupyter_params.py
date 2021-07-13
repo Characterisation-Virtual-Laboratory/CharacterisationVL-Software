@@ -65,10 +65,6 @@ def list_servers():
                 with io.open(os.path.join(runtime_dir, file_name), encoding='utf-8') as f:
                     info = json.load(f)
                     yield(info)
-            if re.match('jpserver-(.+).json', file_name):
-                with io.open(os.path.join(runtime_dir, file_name), encoding='utf-8') as f:
-                    info = json.load(f)
-                    yield(info)
 
 def check_servers(jobid):
     for info in list_servers():
