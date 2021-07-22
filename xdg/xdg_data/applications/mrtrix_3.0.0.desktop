@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=3.0.0
+Name=MRtrix 3
+Comment=MRI analysis software
+Icon=gnome-terminal.png
+Exec=xdg-open #PATH_TO_PROGRAMS#mrtrix/mrtrix.txt
+Path=
+Terminal=
+Categories=X-CVL-MRTRIX
