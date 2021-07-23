@@ -20,7 +20,7 @@ HARDWARE   cpu
     export FSLMACHTYPE=linux_64-gcc4.8
 
 %files
-    fslinstaller.py
+    fslinstaller.py /opt/fsl/fslinstaller.py
 
 %post
     echo "============================================="
@@ -59,8 +59,7 @@ HARDWARE   cpu
     echo "Installing FSL"
     echo "=============="
     mkdir -p /opt/fsl
-    python fslinstaller.py -D -d /opt/fsl/6.0.1 -V 6.0.1
-
+    python /opt/fsl/fslinstaller.py -D -d /opt/fsl/6.0.1 -V 6.0.1
 
 %runscript
     $*
