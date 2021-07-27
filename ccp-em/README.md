@@ -27,8 +27,11 @@
             To build the container: sudo singularity build ccpm.simg ccp-em_v1.3.0-cuda-9.0.def
 
 * Run:      
+
             singularity exec --nv imageFileName.simg vglrun ccpem
             singularity exec --nv imageFileName.simg vglrun relion
 
 * Test:     
+
             singularity exec --nv imageFileName.simg vglrun ccpem
+            
