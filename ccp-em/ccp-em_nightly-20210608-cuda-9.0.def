@@ -13,7 +13,7 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-
     LAST_UPDATED 23-JUL-2021
 
 %environment
-    CCPEM="/opt/ccpem-20210608/bin"
+    export CCPEM=/opt/ccpem-20210608/bin
    
     #CCP4 flags
     export BALBES_ROOT=/opt/ccp4-7.1/BALBES
@@ -23,7 +23,7 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-
     export CCP4_HELPDIR=/opt/ccp4-7.1/help/
     export CCP4_OPEN=UNKNOWN
     export CCP4_MASTER=/opt 
-    export CCP4_SCR=/tmp/root
+    export CCP4_SCR="/tmp/`whoami | tr ' \\\\' _`"
     export CCP4I_TCLTK=/opt/ccp4-7.1/bin
     export CCP4I_TOP=/opt/ccp4-7.1/share/ccp4i
     export CETC=/opt/ccp4-7.1/etc
