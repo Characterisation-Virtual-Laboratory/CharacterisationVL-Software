@@ -1,15 +1,15 @@
 Bootstrap:  shub
-From:       Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004-cuda11.5
+From:       Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-cuda10.1
 
 %labels
     MAINTAINER shu.chia@monash.edu
 
     APPLICATION_NAME ubuntu
-    APPLICATION_VERSION 20.04
+    APPLICATION_VERSION 18.04
 
     HARDWARE CPU
 
-    LAST_UPDATED 22-DEC-2021
+    LAST_UPDATED 17-JAN-2022
 
 %files
     SCIPOptSuite-7.0.3-Linux-ubuntu.sh /opt
@@ -17,6 +17,8 @@ From:       Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004
 %environment
     # Add SCIP to PATH
     export PATH=$PATH:/opt/SCIPOptSuite-7.0.3-Linux/bin
+    # Fix GCG error
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/SCIPOptSuite-7.0.3-Linux/lib
 
 %post
     echo "*********************************************************"
@@ -46,7 +48,9 @@ From:       Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004
 
     # Install dependencies
     apt-get -y update
-    apt-get -y install gcc g++ gfortran liblapack3 libtbb2 libcliquer1 libopenblas-dev libgsl23 gfortran-7
+    # libboost-program-options-dev to fix SoPlex error
+    # https://askubuntu.com/questions/730123/libboost-program-options-so-not-found-even-though-the-package-is-installed
+    apt-get -y install gcc g++ gfortran liblapack3 libtbb2 libcliquer1 libopenblas-dev libgsl23 libboost-program-options-dev
     
     # Install SCIP
     cd /opt
