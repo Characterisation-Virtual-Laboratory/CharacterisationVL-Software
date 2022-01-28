@@ -1,24 +1,22 @@
 Bootstrap:  shub
-From:       Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-cuda10.1
+From:       Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004-cuda11.5
 
 %labels
     MAINTAINER shu.chia@monash.edu
 
     APPLICATION_NAME ubuntu
-    APPLICATION_VERSION 18.04
+    APPLICATION_VERSION 20.04
 
     HARDWARE CPU
 
     LAST_UPDATED 28-JAN-2022
 
 %files
-    SCIPOptSuite-7.0.3-Linux-ubuntu.sh /opt
+    SCIPOptSuite-8.0.0-Linux-ubuntu.sh /opt
 
 %environment
     # Add SCIP to PATH
-    export PATH=$PATH:/opt/SCIPOptSuite-7.0.3-Linux/bin
-    # Fix GCG error
-    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/SCIPOptSuite-7.0.3-Linux/lib
+    export PATH=$PATH:/opt/SCIPOptSuite-8.0.0-Linux/bin
 
 %post
     echo "*********************************************************"
@@ -48,12 +46,12 @@ From:       Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804
 
     # Install dependencies
     apt -y update
-    apt -y install gcc g++ gfortran liblapack3 libtbb2 libcliquer1 libopenblas-dev libgsl23 libboost-program-options1.65.1
+    apt -y install gcc g++ gfortran liblapack3 libtbb2 libcliquer1 libopenblas-dev libgsl23 patchelf
     
     # Install SCIP
     cd /opt
-    ./SCIPOptSuite-7.0.3-Linux-ubuntu.sh --prefix=/opt --include-subdir --skip-license
-    rm SCIPOptSuite-7.0.3-Linux-ubuntu.sh
+    ./SCIPOptSuite-8.0.0-Linux-ubuntu.sh --prefix=/opt --include-subdir --skip-license
+    rm SCIPOptSuite-8.0.0-Linux-ubuntu.sh
 
 %runscript
     $*
