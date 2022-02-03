@@ -9,7 +9,7 @@ From:       Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804
 
     HARDWARE CPU
 
-    LAST_UPDATED 28-JAN-2022
+    LAST_UPDATED 01-FEB-2022
 
 %files
     SCIPOptSuite-7.0.3-Linux-ubuntu.sh /opt
@@ -17,6 +17,8 @@ From:       Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804
 %environment
     # Add SCIP to PATH
     export PATH=$PATH:/opt/SCIPOptSuite-7.0.3-Linux/bin
+    # Add hMETIS to PATH
+    export PATH=$PATH:/opt/hmetis-2.0pre1/Linux-x86_64
     # Fix GCG error
     export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/SCIPOptSuite-7.0.3-Linux/lib
 
@@ -48,8 +50,20 @@ From:       Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804
 
     # Install dependencies
     apt -y update
-    apt -y install gcc g++ gfortran liblapack3 libtbb2 libcliquer1 libopenblas-dev libgsl23 libboost-program-options1.65.1
+    apt -y install gcc g++ gfortran liblapack3 libtbb2 libcliquer1 libopenblas-dev libgsl23 libboost-program-options1.65.1 zsh
     
+    # Install hMETIS
+    cd /opt
+    wget http://glaros.dtc.umn.edu/gkhome/fetch/sw/hmetis/hmetis-2.0pre1.tar.gz
+    gunzip hmetis-2.0pre1.tar.gz
+    tar -xvf hmetis-2.0pre1.tar
+    rm hmetis-2.0pre1.tar
+    mv hmetis-2.0pre1/Linux-i686/hmetis2.0pre1 hmetis-2.0pre1/Linux-i686/hmetis
+    mv hmetis-2.0pre1/Linux-x86_64/hmetis2.0pre1 hmetis-2.0pre1/Linux-x86_64/hmetis
+
+    # Fix permissions error with hMETIS
+    chmod -R o+rx /opt/hmetis-2.0pre1
+
     # Install SCIP
     cd /opt
     ./SCIPOptSuite-7.0.3-Linux-ubuntu.sh --prefix=/opt --include-subdir --skip-license
