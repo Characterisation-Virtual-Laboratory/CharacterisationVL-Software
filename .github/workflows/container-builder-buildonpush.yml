@@ -6,23 +6,21 @@
 #https://docs.github.com/en/actions/hosting-your-own-runners/adding-self-hosted-runners
 
 
-name: container-builder
+name: container-builder-buildonpush
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
   # not specifying a branch is interpreted as "trigger on any branch"  branches: [ master, githubactions ]
-  pull_request:
-    branches: [ master ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
+  # This workflow contains a single job called "buildonpush"
+  buildonpush:
     # The type of runner that the job will run on
     runs-on: [ self-hosted ]
     
@@ -41,4 +39,4 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           sudo pwd
-          echo GITHUB_REF_NAME	$GITHUB_REF_NAME	
+          echo this is your branchname	$GITHUB_REF_NAME	
