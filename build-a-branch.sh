@@ -17,14 +17,15 @@ CONTAINERDIR="/mnt/volume/test-containers"
 LOGDIR="/mnt/volume/logs"
 
 # Find out new and changed files via git diff-tree
-for file in `git diff-tree --no-commit-id --name-only`
+for FILE in `git diff-tree --no-commit-id --name-only`
 do
+	FILENAME=basename($FILE)
 	# Only operate on Singularity recipes, adopting the convention that they are all named "Singularity.appname"
-	if [[ $file =~ '^Singularity\.' ]]
+	if [[ $FILENAME =~ '^Singularity\.' ]]
 	then
 		# Call the resulting container and log the same as the app name
-		CONTAINERNAME=${file#Singularity.}
-		cd dirname($file)
+		CONTAINERNAME=${$FILE#Singularity.}
+		cd dirname($FILE)
 		# TODO: consider the security implications of not restricting commands in sudoers or setuid the script
 		sudo singularity build $CONTAINERDIR/$CONTAINERNAME.sif 2>&1 > $LOGDIR/$CONTAINERNAME.log
 		# Return to the repo's base directory to potentially build the next recipe
