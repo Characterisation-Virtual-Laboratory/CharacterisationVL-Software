@@ -33,6 +33,6 @@ jobs:
       - name: build container
         run: |
           echo Test echo before running the script
-          ./build-a-branch.sh
+          bash ./build-a-branch.sh
           echo Test echo after running the script
           #echo this is your branchname	$GITHUB_REF_NAME	
