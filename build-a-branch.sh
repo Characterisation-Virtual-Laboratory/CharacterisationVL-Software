@@ -20,7 +20,9 @@ LOGDIR="/mnt/volume/logs"
 # Find out new and changed files via git diff-tree
 echo `git diff-tree --no-commit-id --name-only -r ${GITHUB_SHA}`
 git diff-tree --no-commit-id --name-only -r ${GITHUB_SHA}
-for FILE in `git diff-tree --no-commit-id --name-only -r ${GITHUB_SHA}`
+# for FILE in `git diff-tree --no-commit-id --name-only -r ${GITHUB_SHA}`
+# Test hard-coded name
+for FILE in ubuntu-base-image/Singularity.1804-cuda10.1
 do
 	FILENAME=basename $FILE
 	# Only operate on Singularity recipes, adopting the convention that they are all named "Singularity.appname"
