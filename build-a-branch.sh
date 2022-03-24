@@ -20,17 +20,17 @@ LOGDIR="/mnt/volume/logs"
 # Find out new and changed files via git diff-tree
 echo `git diff-tree --no-commit-id --name-only -r ${GITHUB_SHA}`
 git diff-tree --no-commit-id --name-only -r ${GITHUB_SHA}
-# for FILE in `git diff-tree --no-commit-id --name-only -r ${GITHUB_SHA}`
+for FILE in `git diff-tree --no-commit-id --name-only -r ${GITHUB_SHA}`
 # Test hard-coded name
-for FILE in ubuntu-base-image/Singularity.1804-cuda10.1
+#for FILE in ubuntu-base-image/Singularity.1804-cuda10.1
 do
-	FILENAME=basename $FILE
+	FILENAME=`basename "$FILE"`
 	# Only operate on Singularity recipes, adopting the convention that they are all named "Singularity.appname"
 	if [[ $FILENAME =~ '^Singularity\.' ]]
 	then
 		# Call the resulting container and log the same as the app name
 		CONTAINERNAME=${FILENAME#Singularity.}
-		cd dirname $FILE
+		cd `dirname "$FILE"`
 		# TODO: consider the security implications of not restricting commands in sudoers or setuid the script
 		sudo singularity build $CONTAINERDIR/$CONTAINERNAME.sif $FILENAME 2>&1 > $LOGDIR/$CONTAINERNAME.log
 		# Return to the repo's base directory to potentially build the next recipe
