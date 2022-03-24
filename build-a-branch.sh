@@ -14,10 +14,11 @@
 # TODO: Make the container and log directories input arguments
 BASEDIR=$PWD
 CONTAINERDIR="/mnt/volume/test-containers"
+DEPLOYDIR="/mnt/volume/containers/"
 LOGDIR="/mnt/volume/logs"
 
 # Find out new and changed files via git diff-tree
-for FILE in `git diff-tree --no-commit-id --name-only`
+for FILE in `git diff-tree --no-commit-id --name-only -r ${GITHUB_SHA}`
 do
 	FILENAME=basename $FILE
 	# Only operate on Singularity recipes, adopting the convention that they are all named "Singularity.appname"
@@ -32,3 +33,7 @@ do
 		cd $BASEDIR
 	fi
 done
+
+if [ "$1" = "DEPLOY" ]; then
+    mv $CONTAINERDIR/$CONTAINERNAME.sif $DEPLOYDIR/
+fi
