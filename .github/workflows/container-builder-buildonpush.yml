@@ -32,7 +32,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: build container
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-          sudo pwd
-          echo this is your branchname	$GITHUB_REF_NAME	
+          echo Test echo before running the script
+          ./build-a-branch.sh
+          echo Test echo after running the script
+          #echo this is your branchname	$GITHUB_REF_NAME	
