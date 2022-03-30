@@ -32,4 +32,4 @@ jobs:
           fetch-depth: 0
 
       - name: build and deploy container
-        run: ./build-a-branch.sh DEPLOY
+        run: bash -x ./build-a-branch.sh DEPLOY
