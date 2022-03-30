@@ -35,9 +35,11 @@ do
 		sudo singularity build --force $CONTAINERDIR/$CONTAINERNAME.sif $FILENAME 2>&1 > $LOGDIR/$CONTAINERNAME.log
 		# Return to the repo's base directory to potentially build the next recipe
 		cd $BASEDIR
+		# Put the container into the production directory if we're deploying it
+		if [ "$1" = "DEPLOY" ]; then
+    			mv $CONTAINERDIR/$CONTAINERNAME.sif $DEPLOYDIR/
+		fi
 	fi
 done
 
-if [ "$1" = "DEPLOY" ]; then
-    mv $CONTAINERDIR/$CONTAINERNAME.sif $DEPLOYDIR/
-fi
+
