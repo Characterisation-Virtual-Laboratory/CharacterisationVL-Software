@@ -41,7 +41,6 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-
     unset LD_LIBRARY_PATH
 
 %files
-    ccpem-20210608-linux-x86_64.tar.gz /opt
     ccp4-7.1.015-shelx-arpwarp-linux64.tar.gz /opt
     input.txt /opt
 
@@ -111,6 +110,7 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-
     touch $HOME/.agree2ccpemv1
 
     cd /opt
+    wget https://www.ccpem.ac.uk/downloads/ccpem_distributions/ccpem-20210608-linux-x86_64.tar.gz
     tar -zxvf ccpem-20210608-linux-x86_64.tar.gz
     cd ccpem-20210608
     ./install_ccpem.sh
