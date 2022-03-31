@@ -22,15 +22,15 @@ apt install -y curl \
     python-pandas \
     python-setuptools 
 
-python -m pip install --upgrade setuptools 
-python -m pip install --upgrade numpy==1.13.3 
-python -m pip install --upgrade scipy==1.0.0
-python -m pip install --upgrade matplotlib==2.1.0
-python -m pip install --upgrade pandas==0.21.0
-python -m pip install bx-python
-python -m pip install Jinja2
-python -m pip install tqdm
-python -m pip install weblogo
+ pip install --upgrade setuptools 
+ pip install --upgrade numpy==1.13.3 
+ pip install --upgrade scipy==1.0.0
+ pip install --upgrade matplotlib==2.1.0
+ pip install --upgrade pandas==0.21.0
+ pip install bx-python
+ pip install Jinja2
+ pip install tqdm
+ pip install weblogo
 
 %environment
     export PATH=/haystack_bio/binaries:/haystack_bio/binaries/meme/bin:$PATH
