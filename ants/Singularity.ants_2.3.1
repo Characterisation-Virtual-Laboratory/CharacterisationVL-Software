@@ -26,7 +26,7 @@ Include: apt wget sudo vim build-essential git sudo software-properties-common
     sed -i 's/main/main restricted universe multiverse/g' /etc/apt/sources.list
     apt update
     apt install -y apt-transport-https ca-certificates gnupg software-properties-common wget
-    wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | apt-key add -
+    wget --no-check-certificate -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | apt-key add -
     apt-add-repository 'deb https://apt.kitware.com/ubuntu bionic main'
     echo "*********************************************************"
     echo "Update repositories and install desktop"
