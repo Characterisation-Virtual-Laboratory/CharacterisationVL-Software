@@ -4,10 +4,8 @@
 # through Lawrence Berkeley National Laboratory (subject to receipt of any
 # required approvals from the U.S. Dept. of Energy).  All rights reserved.
 
-BootStrap: debootstrap
-OSVersion: xenial
-MirrorURL: http://au.archive.ubuntu.com/ubuntu/
-
+Bootstrap: shub
+From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-cuda9
 
 %runscript
     echo "IMOD container built for CVL"
@@ -23,40 +21,7 @@ MirrorURL: http://au.archive.ubuntu.com/ubuntu/
     export IMOD_CALIB_DIR=/usr/local/ImodCalib
 
 %post
-    echo "*********************************************************"
-    echo "Setup and display environment"
-    export LC_ALL=en_AU.UTF-8
-    export LANGUAGE=en_AU.UTF-8
-    export DEBIAN_FRONTEND=noninteractive
-    echo $LC_ALL
-    echo $LANGUAGE
-    echo $DEBIAN_FRONTEND
-    echo "*********************************************************"
-    echo "Install repositories"
-    echo "*********************************************************"
-    sed -i 's/main/main restricted universe multiverse/g' /etc/apt/sources.list
-    echo "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64 /" > /etc/apt/sources.list.d/cuda.list
-    apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
-    echo "*********************************************************"
-    echo "Update repositories and install desktop"
-    apt update
-    apt upgrade -y
-    apt install -y locales wget
-    wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/turbovnc_2.1.2_amd64.deb
-    dpkg -i turbovnc_2.1.2_amd64.deb
-    wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/virtualgl_2.5.2_amd64.deb
-    dpkg -i virtualgl_2.5.2_amd64.deb
-    apt update
-    apt -y upgrade
-    locale-gen en_AU.UTF-8
-    apt install -y wget ubuntu-desktop vim software-properties-common git cmake default-jre 
-    echo "*********************************************************"
-    echo "Installing CUDA"
-    apt install -y cuda-8-0
-    echo "*********************************************************"
-    echo "*********************************************************"
-    echo "Installing python dependencies"
-    apt install -y python-pip python-pyqt5 pyqt5-dev python-tk
+    apt install -y  default-jre 
     echo "*********************************************************"
     echo "Installing libjpeg dependencies"
     apt install -y libjpeg-turbo8-*
