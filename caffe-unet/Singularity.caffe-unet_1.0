@@ -96,6 +96,8 @@ Include: apt wget sudo vim build-essential git sudo software-properties-common
  sed -i '/INCLUDE_DIRS/s/$/ \/usr\/include\/hdf5\/serial/' Makefile.config.example
  sed -i '/LIBRARY_DIRS/s/$/ \/usr\/lib\/x86_64-linux-gnu\/hdf5\/serial/' Makefile.config.example
  cp Makefile.config.example Makefile.config
+ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/libcublas-dev_10.1.0.105-1_amd64.deb
+ dpkg -i libcublas-dev_10.1.0.105-1_amd64.deb
  make -j 8 all
  make pycaffe
  make distribute
