@@ -82,8 +82,6 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-
     cd ..
     qmake meshlab_mini.pro $QMAKE_FLAGS && make $MAKE_FLAGS
 
-    ##Copy is to ensure files are found, they are in the wrong place.
-    cp external/lib/linux/*.a external/lib/linux-g++/
 
     qmake meshlab_full.pro $QMAKE_FLAGS && make $MAKE_FLAGS
 
