@@ -45,7 +45,7 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-
     echo "########################################"
 
     #echo "Installing dependencies"
-    apt install -y python3-venv python3-pip
+    apt install -y python3.8-venv
 
     cd /opt
     #git clone -b v0.1.0 https://github.com/LiberTEM/LiberTEM.git
