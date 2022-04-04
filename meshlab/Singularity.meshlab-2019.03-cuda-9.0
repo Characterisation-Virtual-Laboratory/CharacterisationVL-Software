@@ -60,7 +60,7 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-
 
     git clone https://github.com/cnr-isti-vclab/meshlab.git
     cd meshlab
-    git checkout $MESHLABSAH1
+    git checkout $MESHLABSHA1
     cd ..
 
     git clone https://github.com/cnr-isti-vclab/vcglib.git -b devel
