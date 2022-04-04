@@ -8,7 +8,7 @@ MAINTAINER chris.hines@monash.edu
 jupyter_start /start
 jupyter_params.py /params
 tree.html /tree.html
-pages.html /page.html
+page.html /page.html
 
 %post
 #export LC_ALL=en_AU.UTF-8
