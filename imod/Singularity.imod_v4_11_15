@@ -21,7 +21,7 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-
     export IMOD_CALIB_DIR=/usr/local/ImodCalib
 
 %post
-    apt install -y update
+    apt update -y
     apt install -y  default-jre 
     echo "*********************************************************"
     echo "Installing libjpeg dependencies"
