@@ -5,7 +5,7 @@
 # required approvals from the U.S. Dept. of Energy).  All rights reserved.
 
 Bootstrap: shub
-From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-cuda9
+From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-cuda10.1
 
 %runscript
     echo "IMOD container built for CVL"
@@ -30,7 +30,7 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-
     apt install -y libjpeg62*
     echo "*********************************************************"
     echo "Installing software"
-    wget https://bio3d.colorado.edu/imod/AMD64-RHEL5/imod_4.9.9_RHEL6-64_CUDA8.0.sh
-    chmod +x imod_4.9.9_RHEL6-64_CUDA8.0.sh
-    ./imod_4.9.9_RHEL6-64_CUDA8.0.sh -yes
+    wget https://bio3d.colorado.edu/imod/AMD64-RHEL5/imod_4.11.15_RHEL7-64_CUDA10.1.sh
+    chmod +x imod_4.11.15_RHEL7-64_CUDA10.1.sh
+    ./imod_4.11.15_RHEL7-64_CUDA10.1.sh -yes
 
