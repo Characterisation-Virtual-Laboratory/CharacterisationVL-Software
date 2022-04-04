@@ -15,22 +15,22 @@ From: pinellolab/haystack_bio:latest
 %post
 apt update
 apt install -y curl \
-    python-pip \
-    python-numpy \
-    python-scipy\
-    python-matplotlib \
-    python-pandas \
-    python-setuptools 
+    python3-pip \
+    python3-numpy \
+    python3-scipy\
+    python3-matplotlib \
+    python3-pandas \
+    python3-setuptools 
 
- pip install --upgrade setuptools 
- pip install --upgrade numpy==1.13.3 
- pip install --upgrade scipy==1.0.0
- pip install --upgrade matplotlib==2.1.0
- pip install --upgrade pandas==0.21.0
- pip install bx-python
- pip install Jinja2
- pip install tqdm
- pip install weblogo
+ pip3 install --upgrade setuptools 
+ pip3 install --upgrade numpy==1.13.3 
+ pip3 install --upgrade scipy==1.0.0
+ pip3 install --upgrade matplotlib==2.1.0
+ pip3 install --upgrade pandas==0.21.0
+ pip3 install bx-python
+ pip3 install Jinja2
+ pip3 install tqdm
+ pip3 install weblogo
 
 %environment
     export PATH=/haystack_bio/binaries:/haystack_bio/binaries/meme/bin:$PATH
