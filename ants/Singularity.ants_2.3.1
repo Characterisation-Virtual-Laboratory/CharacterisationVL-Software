@@ -35,19 +35,20 @@ Include: apt wget sudo vim build-essential git sudo software-properties-common
     apt upgrade -y
     apt install -y locales
     locale-gen en_AU.UTF-8
-    apt install -y wget ubuntu-desktop vim software-properties-common git cmake 
+    apt install -y wget ubuntu-desktop vim software-properties-common git cmake
     apt install -y zlib1g zlib1g-dev
 
     echo "================================="
-    echo "Building ANTs "
-    echo "================================="    
+    echo "Building ANTs v2.3.1             "
+    echo "================================="
 
     workingDir=${PWD}
-    git clone https://github.com/ANTsX/ANTs.git
+    git clone -b v2.3.1 https://github.com/ANTsX/ANTs.git
     mkdir build install
     cd build
     cmake -DCMAKE_INSTALL_PREFIX=${workingDir}/install ../ANTs
-    make -j 4
+    #make -j 4
+    make
     cd ANTS-build
     make install
 

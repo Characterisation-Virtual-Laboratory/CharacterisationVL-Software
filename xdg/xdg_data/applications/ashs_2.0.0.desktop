@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=2.0.0
+Name=ASHS 2.0.0
+Comment=Automatic Segmentation of Hippocampal Subfields
+Icon=gnome-terminal.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg ashs 2.0.0 "/bin/bash"
+Path=
+Terminal=
+Categories=X-CVL-ASHS

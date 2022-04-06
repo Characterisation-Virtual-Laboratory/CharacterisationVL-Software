@@ -1,0 +1,13 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN" "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+<Menu>
+    <Name>CVL</Name>
+    <Menu>
+        <Name>Globus CLI (Command Line Interface)</Name>
+        <Directory>globus-cli.directory</Directory>
+        <Include>
+            <And>
+                <Category>X-CVL-GLOBUS-CLI</Category>
+            </And>
+        </Include>
+    </Menu>
+</Menu>

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=0.9.2
+Name=MyData 0.9.2
+Comment=MyTardis client
+Icon=mydata.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg mydata 0.9.2 "MyData.sh"
+Path=
+Terminal=
+Categories=X-CVL-MYDATA

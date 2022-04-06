@@ -1,0 +1,13 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN" "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+<Menu>
+    <Name>CVL</Name>
+    <Menu>
+        <Name>MyTardis client</Name>
+        <Directory>mytardisclient.directory</Directory>
+        <Include>
+            <And>
+                <Category>X-CVL-MYTARDISCLIENT</Category>
+            </And>
+        </Include>
+    </Menu>
+</Menu>
