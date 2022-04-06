@@ -31,7 +31,7 @@
         <MergeFile type="parent">../applications-merged/application/darknet.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/datalad.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/digitalmicrograph-free.menu</MergeFile>
-	<MergeFile type="parent">../applications-merged/application/dke.menu</MergeFile>
+	    <MergeFile type="parent">../applications-merged/application/dke.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/dragondisk.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/drishti.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/dtsa2.menu</MergeFile>
@@ -53,12 +53,12 @@
         <MergeFile type="parent">../applications-merged/application/mantid.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/matlab.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/meshlab.menu</MergeFile>
-        <MergeFile type="parent">../applications-merged/application/omero.menu</MergeFile>
-	<MergeFile type="parent">../applications-merged/application/mib.menu</MergeFile>
+	    <MergeFile type="parent">../applications-merged/application/mib.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/mrtrix.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/mrtrix3tissue.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/mydata.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/mydata-python.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/mytardisclient.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/nanconvert.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/octave.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/octopus.menu</MergeFile>
@@ -66,9 +66,10 @@
         <MergeFile type="parent">../applications-merged/application/openrefine.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/paraview.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/protomo.menu</MergeFile>
-        <MergeFile type="parent">../applications-merged/application/R.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/quit.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/R.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/relion.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/scipoptsuite.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/volview.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/vscode.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/x2goclient.menu</MergeFile>

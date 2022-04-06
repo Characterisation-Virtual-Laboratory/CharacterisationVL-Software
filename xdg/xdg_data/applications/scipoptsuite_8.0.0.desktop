@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=8.0.0
+Name=SCIP Optimization Suite 8.0.0
+Comment=Solver for mixed integer programming (MIP) and mixed integer nonlinear programming (MINLP) and framework for constraint integer programming (CIP) and branch-cut-and-price (BCP)
+Icon=SCIP.png
+Exec=## this will change based on the system installation ##
+Path=
+Terminal=
+Categories=X-CVL-SCIP-OPTIMIZATION-SUITE

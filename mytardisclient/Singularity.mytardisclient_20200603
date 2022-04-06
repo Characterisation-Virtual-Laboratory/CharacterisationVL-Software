@@ -1,20 +1,20 @@
 Bootstrap: shub
-From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804
+From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004
 
 %labels
     MAINTAINER_NAME  Jay van Schyndel
     MAINTAINER_EMAIL jay.vanschyndel@monash.edu
 
     APPLICATION_NAME ubuntu
-    APPLICATION_VERSION 18.04
+    APPLICATION_VERSION 20.04
 
     HARDWARE CPU
 
-    LAST_UPDATED 27-MAR-2019
+    LAST_UPDATED 18-NOV-2021
 
 %environment
-    export STITCHPATH=/opt/imblproc/bin
-    export PATH=$STITCHPATH:$PATH
+
+    export PATH=$PATH
 
 %post
     echo "*********************************************************"
@@ -42,14 +42,17 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804
     apt install -y locales
     locale-gen en_AU.UTF-8
 
-    #Installing git
-    apt install -y git
+    echo "*********************************************************"
+    echo "Installing python dependencies"
+    echo "*********************************************************"
+    #apt install -y python3-pip python3-pyqt5 pyqt5-dev python3-tk
     apt install -y python3-pip
-    apt install -y python3-venv python3-pyqt5
 
-
-    cd /opt
-    git clone https://github.com/AustralianSynchrotron/imblproc.git
+    echo "======================================="
+    echo " Installing mytardisclient 03 Jun 2020 "
+    echo "                                       "
+    echo "======================================="
+    pip3 install git+https://github.com/mytardis/mytardisclient.git@58880b1f1d5b7c7a0f7de8dddd0b399a69233b5e#egg=mytardisclient
 
 %runscript
     $*

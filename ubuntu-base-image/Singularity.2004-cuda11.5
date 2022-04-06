@@ -1,20 +1,16 @@
-Bootstrap: debootstrap
-MirrorURL: http://us.archive.ubuntu.com/ubuntu/
-OSVersion:  bionic
-Include: apt wget sudo vim build-essential git sudo software-properties-common dirmngr gpg-agent
+Bootstrap: docker
+From:      ubuntu:20.04
 
 %labels
     MAINTAINER_NAME  Jay van Schyndel
     MAINTAINER_EMAIL jay.vanschyndel@monash.edu
 
     APPLICATION_NAME ubuntu + cuda
-    APPLICATION_VERSION 18.04 + 10.1
+    APPLICATION_VERSION 20.04
 
     HARDWARE gpu
 
-    LAST_UPDATED 27-FEB-2020
-
-# Trivial change to test the autobuild script/action. Used 16 times
+    LAST_UPDATED 08-DEC-2021
 
 %environment
     CUDABINPATH=/usr/local/cuda/bin
@@ -35,11 +31,12 @@ Include: apt wget sudo vim build-essential git sudo software-properties-common d
     echo "*********************************************************"
     echo "Install repositories"
     echo "*********************************************************"
+    apt update
     apt-get install -y software-properties-common
-    apt-add-repository -y 'deb http://us.archive.ubuntu.com/ubuntu/ bionic main restricted'
-    apt-add-repository -y 'deb http://us.archive.ubuntu.com/ubuntu/ bionic-updates main restricted'
-    apt-add-repository -y 'deb http://us.archive.ubuntu.com/ubuntu/ bionic universe'
-    apt-add-repository -y 'deb http://us.archive.ubuntu.com/ubuntu/ bionic-updates universe'
+    apt-add-repository -y 'deb http://us.archive.ubuntu.com/ubuntu/ focal main restricted'
+    apt-add-repository -y 'deb http://us.archive.ubuntu.com/ubuntu/ focal-updates main restricted'
+    apt-add-repository -y 'deb http://us.archive.ubuntu.com/ubuntu/ focal universe'
+    apt-add-repository -y 'deb http://us.archive.ubuntu.com/ubuntu/ focal-updates universe'
     echo "*********************************************************"
     echo "Update repositories and install desktop"
     echo "*********************************************************"
@@ -47,33 +44,33 @@ Include: apt wget sudo vim build-essential git sudo software-properties-common d
     apt upgrade -y
     apt install -y locales
     locale-gen en_AU.UTF-8
-    apt install -y wget ubuntu-desktop vim software-properties-common git cmake
+    apt install -y wget ubuntu-desktop vim software-properties-common git cmake mesa-utils sudo build-essential gpg-agent
+
     echo "*********************************************************"
-    echo "Installing CUDA"
+    echo "Installing CUDA 11.0"
     echo "*********************************************************"
     apt-get install -y g++ freeglut3-dev build-essential libx11-dev libxmu-dev libxi-dev libglu1-mesa libglu1-mesa-dev mesa-utils libgl1-mesa-glx
-    apt-get install -y gcc-6 g++-6
+    apt-get install -y gcc-10
     cd /tmp
-    wget http://developer.download.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.243_418.87.00_linux.run
-    chmod +x cuda_10.1.243_418.87.00_linux.run
-    #mkdir cuda-10.1
-    #./cuda_10.1.243_418.87.00_linux.run --silent --tmpdir=/tmp/cuda-10.1/ --toolkit --toolkitpath=/usr/local/cuda-10.1/ --samples --samplespath=/usr/local/cuda-10.1-samples/ --override
-    ./cuda_10.1.243_418.87.00_linux.run --silent --toolkit --toolkitpath=/usr/local/cuda-10.1/ --samples --samplespath=/usr/local/cuda-10.1-samples/ --override
-    ln -s /usr/local/cuda-10.1 /usr/local/cuda
+    wget https://developer.download.nvidia.com/compute/cuda/11.5.1/local_installers/cuda_11.5.1_495.29.05_linux.run
+    chmod +x cuda_11.5.1_495.29.05_linux.run
+    ./cuda_11.5.1_495.29.05_linux.run --silent --toolkit --toolkitpath=/usr/local/cuda-11.5/ --samples --samplespath=/usr/local/cuda-11.5-samples/ --override
+    ln -s /usr/local/cuda-11.5 /usr/local/cuda
     ln -s /usr/bin/gcc-6 /usr/local/cuda/bin/gcc
     ln -s /usr/bin/g++-6 /usr/local/cuda/bin/g++
 
     echo "*********************************************************"
     echo "Installing python dependencies"
     echo "*********************************************************"
-    apt install -y python-pip python-pyqt5 pyqt5-dev python-tk
+    apt install -y python3-pip python3-pyqt5 pyqt5-dev python3-tk
+
     echo "*********************************************************"
     echo "Installing vglrun and TurboVNC"
     echo "*********************************************************"
-    wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/turbovnc_2.1.2_amd64.deb
-    dpkg -i turbovnc_2.1.2_amd64.deb
-    wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/virtualgl_2.6.2_amd64.deb
-    dpkg -i virtualgl_2.6.2_amd64.deb
+    wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/turbovnc_2.2.5_amd64.deb
+    dpkg -i turbovnc_2.2.5_amd64.deb
+    wget https://swift.rc.nectar.org.au/v1/AUTH_810/CVL-Singularity-External-Files/virtualgl_2.6.4_amd64.deb
+    dpkg -i virtualgl_2.6.4_amd64.deb
     apt update
     apt -y upgrade
 

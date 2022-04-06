@@ -1,22 +1,20 @@
 Bootstrap: shub
-From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804
+From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:2004-cuda11.0
 
 %labels
     MAINTAINER_NAME  Jay van Schyndel
     MAINTAINER_EMAIL jay.vanschyndel@monash.edu
 
     APPLICATION_NAME ubuntu
-    APPLICATION_VERSION 18.04
+    APPLICATION_VERSION 20.04
 
-    HARDWARE CPU
+    HARDWARE GPU
 
-    LAST_UPDATED 27-MAR-2019
+    LAST_UPDATED 17-FEB-2022
 
 %environment
-    export STITCHPATH=/opt/imblproc/bin
-    export PATH=$STITCHPATH:$PATH
 
-%post
+%post -c /bin/bash
     echo "*********************************************************"
     echo "Setup and display environment"
     echo "*********************************************************"
@@ -42,14 +40,15 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804
     apt install -y locales
     locale-gen en_AU.UTF-8
 
-    #Installing git
-    apt install -y git
-    apt install -y python3-pip
-    apt install -y python3-venv python3-pyqt5
+    echo "########################################"
+    echo "# Installing liberTEM - v0.9.0         #"
+    echo "########################################"
 
+    #echo "Installing dependencies"
+    apt install -y python3-venv python3-pip
 
-    cd /opt
-    git clone https://github.com/AustralianSynchrotron/imblproc.git
+    pip3 install cupy-cuda110
+    pip3 install libertem[torch,pyfftw]==0.9.0
 
 %runscript
     $*
