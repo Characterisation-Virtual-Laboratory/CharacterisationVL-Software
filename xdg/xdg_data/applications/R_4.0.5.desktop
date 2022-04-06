@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.39.2
+Name=R 4.0.5
+Comment=Integrated Development Environment
+Icon=R.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg R 4.0.5 "R"
+Path=
+Terminal=1
+Categories=X-CVL-R

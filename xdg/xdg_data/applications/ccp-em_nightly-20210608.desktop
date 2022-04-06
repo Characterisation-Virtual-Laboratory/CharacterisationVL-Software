@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=Nightly 20210608
+Name=CCP-EM
+Comment=Collaborative Computational Project for Electron cryo-Microscopy
+Icon=ccp-em-logo_sqr.png
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg ccp-em nightly "ccpem"
+Path=
+Terminal=
+Categories=X-CVL-CCP-EM

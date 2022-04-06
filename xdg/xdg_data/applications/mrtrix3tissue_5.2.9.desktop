@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=5.2.9
+Name=MRtrix 3 Tissue
+Comment=MRI analysis software
+Icon=gnome-terminal.png
+Exec=xdg-open #PATH_TO_PROGRAMS#mrtrix3tissue/mrtrix3tissue.txt
+Path=
+Terminal=
+Categories=X-CVL-MRTRIX3TISSUE

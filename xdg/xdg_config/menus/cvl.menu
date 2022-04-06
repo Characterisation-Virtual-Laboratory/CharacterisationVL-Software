@@ -24,11 +24,13 @@
         <MergeFile type="parent">../applications-merged/application/cistem.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/cloudstor.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/colmap.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/connectome-workbench.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/convert3d.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/crisprcas.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/cryolo.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/cytoscape.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/darknet.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/datalad.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/digitalmicrograph-free.menu</MergeFile>
 	    <MergeFile type="parent">../applications-merged/application/dke.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/dragondisk.menu</MergeFile>
@@ -38,6 +40,7 @@
         <MergeFile type="parent">../applications-merged/application/fiji.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/gimp.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/git-annex.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/globus-cli.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/globus-connect-personal.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/graphviz.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/ilastik.menu</MergeFile>
@@ -51,9 +54,12 @@
         <MergeFile type="parent">../applications-merged/application/mantid.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/matlab.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/meshlab.menu</MergeFile>
-        <MergeFile type="parent">../applications-merged/application/mib.menu</MergeFile>
+	    <MergeFile type="parent">../applications-merged/application/mib.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/mrtrix.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/mrtrix3tissue.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/mydata.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/mydata-python.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/mytardisclient.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/nanconvert.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/octave.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/octopus.menu</MergeFile>
@@ -62,7 +68,9 @@
         <MergeFile type="parent">../applications-merged/application/paraview.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/protomo.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/quit.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/R.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/relion.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/scipoptsuite.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/volview.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/vscode.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/x2goclient.menu</MergeFile>
