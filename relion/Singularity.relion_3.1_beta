@@ -57,8 +57,8 @@ Stage: 18.04_cuda10
     rm -rf /var/lib/apt/lists/*
 %post
     cd /
-    update-alternatives --install /usr/bin/gcc gcc $(which gcc-6) 30
     update-alternatives --install /usr/bin/g++ g++ $(which g++-6) 30
+    update-alternatives --install /usr/bin/gcc gcc $(which gcc-6) 30
     update-alternatives --install /usr/bin/gcov gcov $(which gcov-6) 30
 
 %post
@@ -74,7 +74,7 @@ Stage: 18.04_cuda10
     dpkg -i cuda-repo-ubuntu1804_10.1.168-1_amd64.deb
     apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
     apt-get update
-    apt install -y cuda
+    apt install -y cuda-10-1
 
 %post
     apt-get update -y
@@ -232,7 +232,7 @@ Stage: final
     apt install -y cuda
     echo '*** Cuda 8 to 10.1 fudge - enables Gctf to run. ***'
     cd /usr/local/cuda/lib64/
-    ln -s libcufft.so.10.1.168 libcufft.so.8.0
+    ln -s libcufft.so.10 libcufft.so.8.0
 
 %files from 18.04_cuda10
     /opt/relion-3.1_beta/bin/ /opt/relion-3.1_beta/bin/

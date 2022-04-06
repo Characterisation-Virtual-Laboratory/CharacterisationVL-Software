@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Directory
+Name=SCIP Optimization Suite
+Comment=Solver for mixed integer programming (MIP) and mixed integer nonlinear programming (MINLP) and framework for constraint integer programming (CIP) and branch-cut-and-price (BCP)
+GenericName=Scientific solver
+Icon=SCIP.png

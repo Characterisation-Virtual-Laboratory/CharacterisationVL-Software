@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=0.8.0
+Name=LiberTEM 0.8.0
+Comment=Processing of pixelated scanning transmission electron microscopy data
+Icon="LiberTEM logo icon.svg"
+Exec=#DESKTOP_START_ARG_PATH#desktop_start_arg libertem 0.8.0 "libertem-server"
+Path=
+Terminal=
+Categories=X-CVL-LIBERTEM

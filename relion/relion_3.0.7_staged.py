@@ -70,7 +70,7 @@ Stage0 += shell(
         "dpkg -i cuda-repo-ubuntu1804_10.1.168-1_amd64.deb",
         "apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub",
         "apt-get update",
-        "apt install -y cuda"
+        "apt install -y cuda-10-1"
     ]
 )
 
@@ -210,7 +210,7 @@ Stage1 += shell(
         "apt install -y cuda",
         "echo '*** Cuda 8 to 10.1 fudge - enables Gctf to run. ***'",
         "cd /usr/local/cuda/lib64/",
-        "ln -s libcufft.so.10.1.168 libcufft.so.8.0"
+        "ln -s libcufft.so.10 libcufft.so.8.0"
     ])
 
 # Relion
