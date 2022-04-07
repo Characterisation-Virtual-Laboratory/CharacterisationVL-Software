@@ -4,7 +4,6 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-
 %files
     protomo-2.4.2.tar.bz2 /tmp/
     i3-0.9.8.tar.bz2 /tmp/
-    input.txt /tmp/
 
 %environment
     export CONDA_SHLVL=1
@@ -64,7 +63,7 @@ From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804-
     echo "Installing EMAN 2.3             "
     echo "================================"
     export PATH=/opt/eman/bin:$PATH
-    cat input.txt | bash eman2.3.linux64.sh
+    echo "/opt/eman/" | bash eman2.3.linux64.sh
 
     # ** Don't install, protomo errors with Sparx, using python instead. Unable to resolve.
     #pip install sparx

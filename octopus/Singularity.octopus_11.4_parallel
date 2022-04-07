@@ -24,9 +24,9 @@ From: ubuntu:16.04
     make
     make install
 # Install octopus from source
-    wget --output-document=octopus.tar.gz http://octopus-code.org/down.php?file=8.4/octopus-8.4.tar.gz
+    wget --output-document=octopus.tar.gz http://octopus-code.org/down.php?file=11.4/octopus-11.4.tar.gz
     tar xf octopus.tar.gz
-    cd octopus-8.4/
+    cd octopus-11.4/
     ./configure --with-libxc-prefix=/opt/etsf/ --enable-mpi --enable-openmp
     make 
     make install
