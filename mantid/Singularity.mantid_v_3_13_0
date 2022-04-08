@@ -35,9 +35,10 @@ HARDWARE cpu
     sed -i 's/main/main restricted universe multiverse/g' /etc/apt/sources.list
     apt-add-repository "deb [arch=amd64] http://apt.isis.rl.ac.uk xenial main"
     # add the signing key
-    wget -O - http://apt.isis.rl.ac.uk/2E10C193726B7213.asc | apt-key add -
-    apt-add-repository "deb [arch=amd64] http://apt.isis.rl.ac.uk $(lsb_release -c | cut -f 2) main"
-    apt-add-repository ppa:mantid/mantid
+    # add the mantid signing key
+    wget -O - http://apt.isis.rl.ac.uk/2E10C193726B7213.asc | sudo apt-key add -
+    sudo apt-add-repository "deb [arch=amd64] http://apt.isis.rl.ac.uk $(lsb_release -c | cut -f 2) main"
+    sudo apt-add-repository ppa:mantid/mantid
     echo "*********************************************************"
     echo "Update repositories and install desktop"
     echo "*********************************************************"
