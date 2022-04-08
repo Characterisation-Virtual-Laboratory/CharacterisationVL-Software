@@ -13,6 +13,8 @@ MirrorURL: http://au.archive.ubuntu.com/ubuntu/
     echo "DragonDisk container built for CVL"
     echo "For new versions please contact help@cvl.org.au"
     dragondisk
+%files
+    dragondisk_1.0.5-0ubuntu_amd64.deb /opt/
 
 %post
     echo "*********************************************************"
@@ -36,5 +38,4 @@ MirrorURL: http://au.archive.ubuntu.com/ubuntu/
     apt install -y wget vim libqt4-dbus libqt4-network libqt4-xml libqtcore4 libqtgui4
     echo "*********************************************************"
     echo "Installing software"
-    wget http://download.dragondisk.com/dragondisk_1.0.5-0ubuntu_amd64.deb
-    dpkg -i dragondisk_1.0.5-0ubuntu_amd64.deb
+    dpkg -i /opt/dragondisk_1.0.5-0ubuntu_amd64.deb
