@@ -26,7 +26,7 @@ HARDWARE ?
     echo "*********************************************************"
     # ITK and nanconvert need cmake
     apt -y install cmake
-    git clone -b v5.0.0 https://itk.org/ITK.git /ITK-5.0.0
+    git clone -b v5.0.0 https://github.com/InsightSoftwareConsortium/ITK.git /ITK-5.0.0
     mkdir /ITK-build
     cd /ITK-build
     cmake /ITK-5.0.0/
