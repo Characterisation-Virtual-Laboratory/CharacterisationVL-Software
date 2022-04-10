@@ -1,0 +1,39 @@
+Bootstrap: shub
+From:      Characterisation-Virtual-Laboratory/CharacterisationVL-Software:1804
+
+%labels
+MAINTAINER jafar.lie@monash.edu
+HARDWARE gpu
+
+
+%runscript
+    echo "This is what happens when you run the container..."
+    $*
+
+%environment
+    DRISTHI_PATH=/opt/drishti/bin
+    export PATH=$DRISTHI_PATH:$PATH
+
+%post
+    echo "*********************************************************"
+    echo "Installing dristhi requirement"
+    echo "*********************************************************"
+    apt -y install qt5-qmake
+    apt -y install qtmultimedia5-dev libqt5multimediawidgets5 libqt5multimedia5-plugins libqt5multimedia5
+    apt -y install libglew-dev glew-utils
+    apt -y install libqglviewer-dev
+    apt -y install libnetcdf-dev
+    apt -y install libnetcdf-cxx-legacy-dev
+    apt -y install freeglut3-dev
+    echo "*********************************************************"
+    echo "Installing drishti requirement"
+    echo "*********************************************************"
+    mkdir -p /opt/
+    cd /opt/
+    git clone https://github.com/nci/drishti.git
+    cd drishti/drishti
+    qmake -qt=5
+    make -j 4
+    echo "*********************************************************"
+    echo "All Done"
+    echo "*********************************************************"
