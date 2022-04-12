@@ -1,1 +1,0 @@
-SINGULARITY_CACHEDIR=/mnt/tmp SINGULARITY_LOCALCACHEDIR=/mnt/tmp SINGULARITY_TMPDIR=/mnt/tmp2 singularity build haystack.sif docker://pinellolab/haystack_bio
