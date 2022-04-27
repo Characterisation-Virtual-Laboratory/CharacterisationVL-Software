@@ -1,4 +1,4 @@
-# Container recipe
+# Container recipe 
 
 # NOTE: this definition file depends on features only available in
 # Singularity 3.2 and later.
