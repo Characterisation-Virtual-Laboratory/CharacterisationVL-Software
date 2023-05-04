@@ -25,6 +25,7 @@
         <MergeFile type="parent">../applications-merged/application/cloudstor.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/colmap.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/connectome-workbench.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/convert3d.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/crisprcas.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/cryolo.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/cytoscape.menu</MergeFile>
