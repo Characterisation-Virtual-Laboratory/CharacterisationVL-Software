@@ -37,6 +37,7 @@
         <MergeFile type="parent">../applications-merged/application/dtsa2.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/eman.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/fiji.menu</MergeFile>
+        <MergeFile type="parent">../applications-merged/application/fmriprep.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/gimp.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/git-annex.menu</MergeFile>
         <MergeFile type="parent">../applications-merged/application/globus-cli.menu</MergeFile>
